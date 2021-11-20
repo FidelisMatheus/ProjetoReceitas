@@ -5,15 +5,12 @@
 	version="2.1">
 	<persistence-unit name="puReceitas">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>model.Ingrediente</class>
-		<class>model.Receita</class>
-		<class>model.Usuario</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"	value="com.mysql.cj.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/receitasdb?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false" /> 
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="1234" />
-			<property name="hibernate.hbm2ddl.auto" value="create" /> 
+			<property name="hibernate.hbm2ddl.auto" value="update" /> 
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
