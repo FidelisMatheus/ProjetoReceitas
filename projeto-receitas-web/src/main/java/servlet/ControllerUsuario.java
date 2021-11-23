@@ -66,7 +66,7 @@ public class ControllerUsuario extends HttpServlet {
 				user.setNome(request.getParameter("nome"));
 				user.setSenha(request.getParameter("senha"));
 				
-				Date datanascimento = new SimpleDateFormat("dd/mm/yyyy").parse(request.getParameter("datanascimento"));
+				Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
 				user.setDataNascimento(datanascimento);
 
 				user.setLocalizacao(request.getParameter("localizacao"));
@@ -82,7 +82,7 @@ public class ControllerUsuario extends HttpServlet {
 				user.setNome(request.getParameter("nome"));
 				user.setSenha(request.getParameter("senha"));
 				
-				Date datanascimento = new SimpleDateFormat("dd/mm/yyyy").parse(request.getParameter("datanascimento"));
+				Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
 				user.setDataNascimento(datanascimento);
 
 				user.setLocalizacao(request.getParameter("localizacao"));
