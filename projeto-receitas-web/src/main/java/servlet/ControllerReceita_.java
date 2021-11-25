@@ -24,7 +24,7 @@ public class ControllerReceita_ extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int receitaId = Integer.parseInt(request.getParameter("receitaId"));
+		int receitaId = Integer.parseInt(request.getParameter("id"));
 		
 		if (request.getParameter("action").equals("edit")) {
 			
@@ -49,9 +49,9 @@ public class ControllerReceita_ extends HttpServlet {
 		ReceitaDao daoReceita = new ReceitaDao();
 		int receitaId = 0;
 		
-		if (!(request.getParameter("receitaId") == null)) {
+		if (!(request.getParameter("receitaid") == null)) {
 			
-			receitaId = Integer.parseInt(request.getParameter("receitaId"));
+			receitaId = Integer.parseInt(request.getParameter("receitaid"));
 			Receita receita = new Receita();
 			receita = daoReceita.get(receitaId);
 			
