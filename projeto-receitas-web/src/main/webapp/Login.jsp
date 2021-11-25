@@ -17,6 +17,8 @@
 		<div class="container">
 			<h1 style="text-align: center;">Login</h1>
 			<h3 style="text-align: center;">Acesse sua Conta!</h3>
+			
+			<div class="align-items-center">
 				<form action="controllerusuario" method="post">
 				
 					<div class="row justify-content-center">
@@ -37,10 +39,13 @@
 						</div>
 					</div>
 					
-					<div style="justify: center;">
+					<div class="row justify-content-center">
+						<div class="col-6">
 							<input type="submit" value="Entrar" class="btn btn-primary" />
+						</div>
 					</div>
 				</form>
+			</div>
 		</div>
 		
 		<c:import url="footer.html"/>
