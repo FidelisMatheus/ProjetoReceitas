@@ -1,8 +1,11 @@
 package servlet;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -66,8 +69,15 @@ public class ControllerUsuario extends HttpServlet {
 				user.setNome(request.getParameter("nome"));
 				user.setSenha(request.getParameter("senha"));
 				
-				Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
-				user.setDataNascimento(datanascimento);
+				
+				String data = request.getParameter("datanascimento");
+				SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+				formato.setTimeZone(TimeZone.getTimeZone("UTC"));
+				Date dataFormatada = formato.parse(data);
+				user.setDataNascimento(dataFormatada);
+				
+				//Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
+				//user.setDataNascimento(datanascimento);
 
 				user.setLocalizacao(request.getParameter("localizacao"));
 				user.setSexo(request.getParameter("sexo"));
@@ -82,8 +92,15 @@ public class ControllerUsuario extends HttpServlet {
 				user.setNome(request.getParameter("nome"));
 				user.setSenha(request.getParameter("senha"));
 				
-				Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
-				user.setDataNascimento(datanascimento);
+				
+				String data = request.getParameter("datanascimento");
+				SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+				formato.setTimeZone(TimeZone.getTimeZone("UTC"));
+				Date dataFormatada = formato.parse(data);
+				user.setDataNascimento(dataFormatada);
+				
+				//Date datanascimento = new SimpleDateFormat("dd/MM/yyyy").parse(request.getParameter("datanascimento"));
+				//user.setDataNascimento(datanascimento);
 
 				user.setLocalizacao(request.getParameter("localizacao"));
 				user.setSexo(request.getParameter("sexo"));

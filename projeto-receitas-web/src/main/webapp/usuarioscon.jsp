@@ -12,39 +12,43 @@
 	<body>
 		
 		<c:import url="header.html"/>
-	
-		<a href="usuariosadd.jsp">Novo Usuário</a>
 		
-		<jsp:useBean id="daousuario" class="dao.UsuarioDao"/>
-		<c:set var="listadeusuarios" value="${daousuario.all}"/>
-		
-		<c:if test="${not empty listadeusuarios }">
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">Nome</th>
-						<th scope="col">Localizacao</th>
-						<th scope="col">Email</th>
-						<th scope="col">Admin</th>
-						<th scope="col">Ações</th>
-					</tr>
-				</thead>
-				
-				<tbody>
-					<c:forEach var="usuario" items="${ listadeusuarios }">
+		<div class="container">
+			<a href="usuariosadd.jsp">Novo Usuário</a>
+			
+			<jsp:useBean id="daousuario" class="dao.UsuarioDao"/>
+			<c:set var="listadeusuarios" value="${daousuario.all}"/>
+			
+			<c:if test="${not empty listadeusuarios }">
+				<table class="table">
+					<thead>
 						<tr>
-							<td scope="row">${ usuario.nome }</td>
-							<td scope="row">${ usuario.localizacao }</td>
-							<td scope="row">${ usuario.email }</td>
-							<td scope="row">${ usuario.admin }</td>
-							<td scope="row">
-								<a href="${pageContext.request.contextPath}/controllerusuario?action=edit&id=${usuario.id}">Editar</a>
-								<a href="${pageContext.request.contextPath}/controllerusuario?action=del&id=${usuario.id}">Excluir</a>
-							</td>
+							<th scope="col">Nome</th>
+							<th scope="col">Localizacao</th>
+							<th scope="col">Email</th>
+							<th scope="col">Admin</th>
+							<th scope="col">Ações</th>
 						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</c:if>
+					</thead>
+					
+					<tbody>
+						<c:forEach var="usuario" items="${ listadeusuarios }">
+							<tr>
+								<td scope="row">${ usuario.nome }</td>
+								<td scope="row">${ usuario.localizacao }</td>
+								<td scope="row">${ usuario.email }</td>
+								<td scope="row">${ usuario.admin }</td>
+								<td scope="row">
+									<a href="${pageContext.request.contextPath}/controllerusuario?action=edit&id=${usuario.id}">Editar</a>
+									<a href="${pageContext.request.contextPath}/controllerusuario?action=del&id=${usuario.id}">Excluir</a>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</c:if>
+		
+		</div>
+		<c:import url="footer.html"/>
 	</body>
 </html>

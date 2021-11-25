@@ -1,3 +1,5 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -8,37 +10,62 @@
 <title>Insert title here</title>
 </head>
 	<body>
-		<h1>Cadastro de Usuarios</h1>
-		<form action="controllerusuario" method="post">
-			<label>Nome</label>
-			<input type="text" name="nome"/>
-			<br/>
-			
-			<label>Senha</label>
-			<input type="text" name="senha"/>
-			<br/>
-			
-			<label>Data de Nascimento</label>
-			<input type="text" name="datanascimento"/>
-			<br/>
-			
-			<label>Localização</label>
-			<input type="text" name="localizacao"/>
-			<br/>
-			
-			<label>Sexo</label>
-			<input type="text" name="sexo"/>
-			<br/>
-			
-			<label>Email</label>
-			<input type="text" name="email"/>
-			<br/>
-			
-			<label>Admin</label>
-			<input type="text" name="admin"/>
-			<br/>
-			
-			<input type="submit" value="Salvar" />
-		</form>
+		<c:import url="header.html"/>
+		
+		<div class="container">
+			<h1 style="text-align: center;">Bem-Vindo!</h1>
+			<h3 style="text-align: center;">Cadastre-se em nosso site</h3>
+				<form action="controllerusuario" method="post">
+				
+					<div class="form-row">
+					
+						<div class="col">
+							<label>Nome</label>
+							<input type="text" name="nome" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Senha</label>
+							<input type="password" name="senha" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Data de Nascimento</label>
+							<input type="text" name="datanascimento" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Localização</label>
+							<input type="text" name="localizacao" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Sexo</label>
+							<input type="text" name="sexo" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Email</label>
+							<input type="text" name="email" class="form-control"/>
+							<br/>
+						</div>
+							
+						<div class="col">
+							<label>Admin</label>
+							<input type="text" name="admin" class="form-control"/>
+							<br/>
+						</div>
+						
+					</div>
+					<input style="margin: 0 auto" type="submit" value="Cadastrar" class="btn btn-primary" />
+				</form>
+		</div>
+		
+		<c:import url="footer.html"/>
 	</body>
 </html>
