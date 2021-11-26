@@ -1,3 +1,9 @@
+<%@page import="model.Usuario"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +16,6 @@
 	<script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"  crossorigin="anonymous"></script>
 </head>
 <body>
-	
 	<div>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		
@@ -52,17 +57,30 @@
 					          <a class="nav-link active" href="Login.jsp">Entrar</a>
 					        </li>
 					        
+					        
+					        <jsp:useBean id="daousuario" class="dao.UsuarioDao"/>
+					        
 					        <li>
-					        	<div class="dropdown">
-								  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								    Dropdown button
-								  </button>
-								  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								    <a class="dropdown-item" href="#">Action</a>
-								    <a class="dropdown-item" href="#">Another action</a>
-								    <a class="dropdown-item" href="#">Something else here</a>
-								  </div>
-								</div>
+					        	<% 
+					        		String user = (String) session.getAttribute("user"); 
+					        		if (user != null) {
+					        			
+				        			Integer id = (Integer) session.getAttribute("id");
+					        	%>
+						        	<div class="dropdown">
+									  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    Dropdown button
+									  </button>
+									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									    <a class="dropdown-item" href="usuariosadd.jsp">Adicionar</a>
+									    <a class="dropdown-item" href="usuarioscon.jsp">Ver todos</a>
+									    <a class="dropdown-item" href="${pageContext.request.contextPath}/controllerusuario?action=edit&id=<%=id%>%>">Editar</a>								    								    
+									    <a class="dropdown-item" href="LoginJSP/Deslogar.jsp">Sair</a>	
+									  </div>
+									</div>
+								<% } else { %>
+									<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+								<% } %>
 					        </li>
 					      </ul>
 				  	</div>

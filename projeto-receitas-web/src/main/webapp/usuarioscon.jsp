@@ -11,7 +11,7 @@
 </head>
 	<body>
 		
-		<c:import url="header.html"/>
+		<c:import url="header.jsp"/>
 		
 		<div class="container">
 			<a href="usuariosadd.jsp">Novo Usuário</a>
