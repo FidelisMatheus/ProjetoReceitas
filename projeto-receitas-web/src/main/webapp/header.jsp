@@ -65,16 +65,18 @@
 					        		String user = (String) session.getAttribute("user"); 
 					        		if (user != null) {
 					        			
-				        			Integer id = (Integer) session.getAttribute("id");
+				        			session = request.getSession();
 					        	%>
 						        	<div class="dropdown">
 									  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									    Dropdown button
 									  </button>
 									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									    <a class="dropdown-item" href="#">Olá ${ user }</a>
+									  	
 									    <a class="dropdown-item" href="usuariosadd.jsp">Adicionar</a>
 									    <a class="dropdown-item" href="usuarioscon.jsp">Ver todos</a>
-									    <a class="dropdown-item" href="${pageContext.request.contextPath}/controllerusuario?action=edit&id=<%=id%>%>">Editar</a>								    								    
+									    <a class="dropdown-item" href="usuariosedit.jsp">Editar Cadastro</a>								    								    
 									    <a class="dropdown-item" href="LoginJSP/Deslogar.jsp">Sair</a>	
 									  </div>
 									</div>

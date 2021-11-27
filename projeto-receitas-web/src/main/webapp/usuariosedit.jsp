@@ -14,8 +14,12 @@
 		
 		<div class="container">
 			<form action="controllerusuario" method="post">
-			
+				<% 
+					session = request.getSession();
+					int iduser = (int) session.getAttribute("id");
+				%>
 				<input type="hidden" name="usuarioid" value="${usuario.id}"/>
+				<input type="hidden" name="usuarioid" value="${ iduser }"/>
 				
 				<div class="form-row">
   
