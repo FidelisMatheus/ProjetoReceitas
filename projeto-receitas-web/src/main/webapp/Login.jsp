@@ -12,20 +12,20 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 	<body>
-		<c:import url="header.html"/>
+		<c:import url="header.jsp"/>
 		
 		<div class="container">
 			<h1 style="text-align: center;">Login</h1>
 			<h3 style="text-align: center;">Acesse sua Conta!</h3>
 			
 			<div class="align-items-center">
-				<form action="controllerusuario" method="post">
+				<form action="loginservlet" method="post">
 				
 					<div class="row justify-content-center">
 					
 						<div class="col-6">
 							<label>Email</label>
-							<input type="email" name="email" class="form-control"/>
+							<input type="email" name="user" class="form-control"/>
 							<br/>
 						</div>
 						
@@ -34,7 +34,7 @@
 					<div class="row justify-content-center">
 						<div class="col-6">
 							<label>Senha</label>
-							<input type="password" name="senha" class="form-control"/>
+							<input type="password" name="pwd" class="form-control"/>
 							<br/>
 						</div>
 					</div>
