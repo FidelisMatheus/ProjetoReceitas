@@ -10,11 +10,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Lista de Receitas</title>
+
+    <meta charset="ISO-8859-1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Lista de Receitas</title>
 </head>
 <body>
 
+    <c:import url="header.html"/>
+    <div style="margin: 3% auto"></div>
+    <div class="container">
     <a href="receitasadd.jsp">Nova Receita</a>
     
     <jsp:useBean id="daoreceita" class="dao.ReceitaDao" />
@@ -22,28 +28,28 @@
     
     <c:if test="${ not empty listadereceitas }">
         
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>Título</th>
-                    <th>Descrição</th>
-                    <th>Modo de Preparo</th>
-                    <th>Porção</th>
-                    <th>Tempo de Preparo</th>
-                    <th>Ações</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Modo de Preparo</th>
+                    <th scope="col">Porção</th>
+                    <th scope="col">Tempo de Preparo</th>
+                    <th scope="col">Ações</th>
                 </tr>                                
             </thead>
             <tbody>
                 
                 <c:forEach var="receita" items="${listadereceitas}">
                     <tr>
-                        <td>${receita.titulo}</td>
-                        <td>${receita.descricao}</td>
-                        <td>${receita.modoPreparo}</td>
-                        <td>${receita.porcao}</td>
-                        <td>${receita.tempoPreparo}</td>
+                        <td scope="row">${receita.titulo}</td>
+                        <td scope="row">${receita.descricao}</td>
+                        <td scope="row">${receita.modoPreparo}</td>
+                        <td scope="row">${receita.porcao}</td>
+                        <td scope="row">${receita.tempoPreparo}</td>
                         
-                        <td>
+                        <td scope="row">
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
                         </td>
@@ -53,6 +59,7 @@
             </tbody>            
         </table>    
     </c:if>
-    
+    </div>
+    <c:import url="footer.html"/>
 </body>
 </html>
