@@ -57,7 +57,7 @@
 					        </li>
 					        
 					        <li class="nav-item">
-					          <a class="nav-link active" href="#">Envie sua receita</a>
+					          <a class="nav-link active" href="receitasadd.jsp">Envie sua receita</a>
 					        </li>
 					        
 					        <li>
@@ -96,16 +96,16 @@
 		
 		  <div class="container-fluid">
 		  
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-primary">Rápidas</button>
+		    <button type="button" class="btn btn-primary">Vegetariana</button>
+		    <button type="button" class="btn btn-primary">Vegana</button>
+		    <button type="button" class="btn btn-primary">Mais Curtidas</button>
+		    <button type="button" class="btn btn-primary">Receitas de Natal</button>
+		    <button type="button" class="btn btn-primary">Receitas de Ano Novo</button>
+		    <button type="button" class="btn btn-primary">Festa Junina</button>
+		    <button type="button" class="btn btn-primary">Páscoa</button>
+		    <button type="button" class="btn btn-primary">Caseiras</button>
+		    <button type="button" class="btn btn-primary">Peixes</button>
 		    
 		  </div>
 		  
