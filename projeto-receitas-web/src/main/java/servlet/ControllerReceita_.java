@@ -1,19 +1,24 @@
 package servlet;
 
 import java.io.IOException;
-import java.text.ParseException;
+import java.nio.file.Paths;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import dao.ReceitaDao;
+import dao.UsuarioDao;
 import model.Receita;
+import model.Usuario;
 
 
 @WebServlet({ "/ControllerReceita_", "/controllerreceita" })
+@MultipartConfig
 public class ControllerReceita_ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -69,7 +74,7 @@ public class ControllerReceita_ extends HttpServlet {
 			
 			daoReceita.update(receita);
 			response.sendRedirect("receitascon.jsp?msg=upd");
-		}else {
+		} else {
 			
 			Receita receita = new Receita();
 			//receita.setCategoria(request.getParameter("categoria"));
@@ -78,10 +83,26 @@ public class ControllerReceita_ extends HttpServlet {
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));
+			
+			
+			//Testar Imagem
+			Part filePart = request.getPart("urlfoto"); // Retrieves <input type="file" name="file">
+		    String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
+		    InputStream fileContent = filePart.getInputStream();
+			
+			
 			receita.setUrlfoto(request.getParameter("urlfoto"));
 			
+			
+			
+			
 			//aqui vou pegar o usuario e ingredientes por sessão
-			//receita.setUsuario(usuario);
+			UsuarioDao daousuario = new UsuarioDao();
+			
+			int usuarioid = Integer.parseInt(request.getParameter("usuarioid"));
+			Usuario usuario = daousuario.get(usuarioid);
+			
+			receita.setUsuario(usuario);
 			//receita.setIngrediente(request.getParameter("listaIngredientes"));
 			
 			

@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <c:import url="header.html"/>
+    <c:import url="header.jsp"/>
     <div class="container">
     
     <h1 style="text-align: center;">Editar receita</h1>

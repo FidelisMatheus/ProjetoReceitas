@@ -37,7 +37,7 @@
 					
 					<div class="col">
 						<label>Data de Nascimento</label>
-						<input type="text" name="datanascimento" value="<fmt:formatDate value="${aluno.dataNascimento }" pattern="dd/MM/yyyy" />" class="form-control" /> 
+						<input type="text" name="datanascimento" value="<fmt:formatDate value="${usuario.dataNascimento }" pattern="dd/MM/yyyy" />" class="form-control" /> 
 						<br/>
 					</div>
 					

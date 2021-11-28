@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <c:import url="header.html"/>
+    <c:import url="header.jsp"/>
     <div style="margin: 3% auto"></div>
     <div class="container">
     <a href="receitasadd.jsp">Nova Receita</a>

@@ -1,5 +1,5 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -13,55 +13,62 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
-	
+
 </head>
 <body>
-    <c:import url="header.html"/>
-    
-    <div class="container">
-        <div style="margin: 5% auto"></div>
-            <h3 style="text-align: center;">Cadastre sua Receita</h3>
-		<form action="controllerreceita" method="post">
-		  <div class="form-row">
-		     
-		     <div class="col">		      
-			     <label>Título da Receita</label> 
-			     <input type="text" name="titulo" class="form-control"/>			     			      
-			 </div>
-			 
-			 <div class="col">
-			     <label>Descrição</label>
-                 <input type="text" name="descricao" class="form-control"/> 
-			 </div>
-			 
-			 <div class="col">			     
-                <label>Modo de Preparo</label> 
-                <input type="text" name="modoPreparo" class="form-control"/> 
-			 </div>   
-            
-            <div class="col">
-                <label>Porção</label>
-                <input type="text" name="porcao" class="form-control"/> 
-            </div>
-            
-            <div class="col">
-                <label>Tempo de Preparo</label> 
-                <input type="text" name="tempoPreparo" class="form-control"/>
-            </div>			
-			
-			<div class="col">
-			     <label>Url Foto</label> 
-                <input type="file" name="urlFoto" class="form-control"/>            
-			</div>
-			
-			<div style=" display: flex; margin-top: 20px; justify-content: center; align-items: center;">			     
-                <input type="submit" value="Salvar"class="btn btn-primary" style="margin-top 20px;"/>
-			</div>
+	<c:import url="header.jsp" />
 
-	       </div>
+	<div class="container">
+		<div style="margin: 5% auto"></div>
+		<h3 style="text-align: center;">Cadastre sua Receita</h3>
+		<form action="controllerreceita" method="post" enctype="application/x-www-form-urlencoded">
+
+			<%
+				session = request.getSession();
+				int iduser = (int) session.getAttribute("id");
+			%>
+			
+			<input type="hidden" name="usuarioid" value="${ iduser }"/>
+
+			<div class="form-row">
+
+				<div class="col">
+					<label>Título da Receita</label> <input type="text" name="titulo" class="form-control" />
+				</div>
+
+				<div class="col">
+					<label>Descrição</label> <input type="text" name="descricao" class="form-control" />
+				</div>
+
+				<div class="col">
+					<label>Modo de Preparo</label> <input type="text" name="modoPreparo" class="form-control" />
+				</div>
+
+				<div class="col">
+					<label>Porção</label> <input type="text" name="porcao" class="form-control" />
+				</div>
+
+				<div class="col">
+					<label>Tempo de Preparo</label> <input type="text" name="tempoPreparo" class="form-control" />
+				</div>
+
+				<div class="col">
+					<label>Url Foto</label> 
+					<input type="file" name="urlFoto" class="form-control" />
+				</div>
+				
+				<input type="hidden" name="usuarioid" class="form-control" />
+
+				<div
+					style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
+					<input type="submit" value="Salvar" class="btn btn-primary"
+						style="" />
+				</div>
+
+			</div>
 		</form>
-    </div>
+	</div>
 
-    <c:import url="footer.html"/>
+	<c:import url="footer.html" />
 </body>
 </html>

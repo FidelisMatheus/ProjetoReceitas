@@ -57,9 +57,6 @@
 					          <a class="nav-link active" href="Login.jsp">Entrar</a>
 					        </li>
 					        
-					        
-					        <jsp:useBean id="daousuario" class="dao.UsuarioDao"/>
-					        
 					        <li>
 					        	<% 
 					        		String user = (String) session.getAttribute("user"); 
