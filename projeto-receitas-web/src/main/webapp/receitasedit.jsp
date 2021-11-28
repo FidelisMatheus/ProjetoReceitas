@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <c:import url="header.html"/>
+    <c:import url="utils/header.jsp"/>
     <div class="container">
     
     <h1 style="text-align: center;">Editar receita</h1>
@@ -68,7 +68,7 @@
          </div>
     </form>
     </div>
-    <c:import url="footer.html"/>
+    <c:import url="utils/footer.html"/>
 </body>
 </html>
 

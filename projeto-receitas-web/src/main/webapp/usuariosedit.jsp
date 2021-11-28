@@ -10,55 +10,75 @@
 <title>Insert title here</title>
 </head>
 	<body>
-		<c:import url="header.jsp"/>
+		<c:import url="utils/header.jsp"/>
+		
+		<% 
+			session = request.getSession();
+			int iduser = (int) session.getAttribute("id");
+		%>
 		
 		<div class="container">
-			<form action="controllerusuario" method="post">
+			<h1 style="text-align: center;">Editar Cadastro</h1>
 			
+			<form action="controllerusuario" method="post">
+				
 				<input type="hidden" name="usuarioid" value="${usuario.id}"/>
+				<input type="hidden" name="usuarioid" value="${ iduser }"/>
 				
 				<div class="form-row">
-  
-					<div class="col">
-						<label class="form-label">Nome</label>
-						<input type="text" name="nome" value="${ usuario.nome }" class="form-control"/>
-						<br/>
+  					
+  					<div class="row">
+						<div class="col">
+							<label class="form-label">Nome</label>
+							<input type="text" name="nome" value="${ usuario.nome }" class="form-control"/>
+							<br/>
+						</div>
+						
+						<div class="col">
+							<label>Senha</label>
+							<input type="password" name="senha" value="${ usuario.senha }" class="form-control"/>
+							<br/>
+						</div>
 					</div>
 					
-					<div class="col">
-						<label>Senha</label>
-						<input type="password" name="senha" value="${ usuario.senha }" class="form-control"/>
-						<br/>
+					<div class="row">
+						<div class="col">
+							<label>Data de Nascimento</label>
+							<input type="text" name="datanascimento" value="<fmt:formatDate value="${usuario.dataNascimento }" pattern="dd/MM/yyyy" />" class="form-control" /> 
+							<br/>
+						</div>
+						
+						<div class="col">
+							<label>Localização</label>
+							<input type="text" name="localizacao" value="${ usuario.localizacao }" class="form-control"/>
+							<br/>
+						</div>
 					</div>
 					
-					<div class="col">
-						<label>Data de Nascimento</label>
-						<input type="text" name="datanascimento" value="<fmt:formatDate value="${aluno.dataNascimento }" pattern="dd/MM/yyyy" />" class="form-control" /> 
-						<br/>
+					<div class="row">
+						<div class="col">
+							<label>Email</label>
+							<input type="text" name="email" value="${ usuario.email }" class="form-control"/>
+							<br/>
+						</div>
+						
+						<div class="col">
+							<label>Admin</label>
+							<input type="text" name="admin" value="${ usuario.admin }" class="form-control"/>
+							<br/>
+						</div>
 					</div>
 					
-					<div class="col">
-						<label>Localização</label>
-						<input type="text" name="localizacao" value="${ usuario.localizacao }" class="form-control"/>
-						<br/>
-					</div>
-					
-					<div class="col">
-						<label>Sexo</label>
-						<input type="text" name="sexo" value="${ usuario.sexo }" class="form-control"/>
-						<br/>
-					</div>
-					
-					<div class="col">
-						<label>Email</label>
-						<input type="text" name="email" value="${ usuario.email }" class="form-control"/>
-						<br/>
-					</div>
-					
-					<div class="col">
-						<label>Admin</label>
-						<input type="text" name="admin" value="${ usuario.admin }" class="form-control"/>
-						<br/>
+					<div>
+						<label>Sexo</label><br/>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Masculino" name="sexo" value="${ usuario.sexo }"/>
+							<label class="form-check-label" for="Masculino">Masculino</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Feminino" name="sexo" value="${ usuario.sexo }"/>
+							<label class="form-check-label" for="Feminino">Feminino</label>
+						</div>
 					</div>
 				
 				</div>
@@ -67,6 +87,6 @@
 			</form>
 		</div>
 		
-		<c:import url="footer.html"/>
+		<c:import url="utils/footer.html"/>
 	</body>
 </html>
