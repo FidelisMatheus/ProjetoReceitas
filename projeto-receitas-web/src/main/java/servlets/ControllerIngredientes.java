@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.Enumeration;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,8 @@ import model.Ingrediente;
 /**
  * Servlet implementation class ControllerIngredientes
  */
+
+@WebServlet("/list")
 public class ControllerIngredientes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -34,6 +37,8 @@ public class ControllerIngredientes extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		
 		int ingid = Integer.parseInt(request.getParameter("id"));
 		
 		if(request.getParameter("action").equals("edit")) {
@@ -43,6 +48,7 @@ public class ControllerIngredientes extends HttpServlet {
 			request.setAttribute("ingrediente",coning);
 			request.getRequestDispatcher("ingedit.jsp").forward(request, response);
 		}
+
 		
 		if(request.getParameter("action").equals("del")) {
 			IngredienteDao daoing = new IngredienteDao();
@@ -60,9 +66,9 @@ public class ControllerIngredientes extends HttpServlet {
 		int ingid = 0;
 		
 		
-		if(!(request.getParameter("ingid") == null)) {
+		if(!(request.getParameter("id") == null)) {
 			
-			ingid = Integer.parseInt(request.getParameter("ingid"));
+			ingid = Integer.parseInt(request.getParameter("id"));
 			
 			Ingrediente ing = daoing.get(ingid);
 		
@@ -78,7 +84,7 @@ public class ControllerIngredientes extends HttpServlet {
 		ing.setUnidadeMedida(UnidadeMedida.valueOf(request.getParameter("unidadeMedida")));
 		
 		daoing.save(ing);
-		response.sendRedirect("ingcon.jsp?msg=add");	
+		response.sendRedirect("ingcon.jsp?msg=add");
 	}
 	}
 

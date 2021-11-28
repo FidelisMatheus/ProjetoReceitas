@@ -34,8 +34,8 @@
 				<td>${ ingrediente.unidadeMedida }</td>
 
 				<td>
-				<a href="${pageContext.request.contextPath}/controlleringredientes?action=edit&id=${ingrediente.id}">Editar</a>
-				<a href="${pageContext.request.contextPath}/controlleringredientes?action=del&id=${ingrediente.id}">Excluir</a>
+				<a href="${pageContext.request.contextPath}/ControllerIngredientes?action=edit&id=${ingrediente.id}">Editar</a>
+				<a href="${pageContext.request.contextPath}/ControllerIngredientes?action=del&id=${ingrediente.id}">Excluir</a>
 				</td>
 			</tr>
 			</c:forEach>

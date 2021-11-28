@@ -1,27 +1,24 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@page import="model.Ingrediente"%>
+    <%@page import="model.Ingrediente"%>
 <%@page import="dao.IngredienteDao"%>
 <%@page import="enuns.UnidadeMedida"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Ingredientes</title>
+<title>Editar Ingrediente</title>
 </head>
 <body>
 
+<form action="controlleringredientes" method="post">
+
 <% UnidadeMedida[] unidades = UnidadeMedida.values(); %>
 
-
-<form action="ControllerIngredientes" method="post">
+<input type="hidden" name="ingid" value="${ingrediente.id}"/>
 
 	<label>Nome</label>
-	<input type="text" name="nome"/>
+	<input type="text" name="nome" value="${ingrediente.nome}"/>
 	<br/>
 	
 	<label>Unidade de medida</label>
@@ -29,12 +26,12 @@
    <c:forEach items="<%=unidades%>" var="item">
     <option>${item}</option>
 </c:forEach>
-</select>
 	<br/>
 	
 	<input type="submit" value="Salvar" />
 
 </form>
+
 
 </body>
 </html>
