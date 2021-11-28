@@ -13,7 +13,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 	<body>
-		<c:import url="header.jsp"/>
+		<c:import url="utils/header.jsp"/>
 		
 		<div class="container">
 			
@@ -118,6 +118,6 @@
 		</div>
 		
 		
-		<c:import url="footer.html"/>
+		<c:import url="utils/footer.html"/>
 	</body>
 </html>

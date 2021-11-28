@@ -16,7 +16,7 @@
 
 </head>
 <body>
-	<c:import url="header.jsp" />
+	<c:import url="utils/header.jsp" />
 
 	<div class="container">
 		<div style="margin: 5% auto"></div>
@@ -69,6 +69,6 @@
 		</form>
 	</div>
 
-	<c:import url="footer.html" />
+	<c:import url="utils/footer.html" />
 </body>
 </html>

@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
 			//setting session to expiry in 30 mins
 			session.setMaxInactiveInterval(30*60);
 			
-			response.sendRedirect("./LoginJSP/LoginSuccess.jsp");
+			response.sendRedirect("Home.jsp");
 		} else {
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/Login.jsp");
 			PrintWriter out= response.getWriter();

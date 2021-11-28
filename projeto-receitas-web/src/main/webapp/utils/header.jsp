@@ -30,6 +30,13 @@
 			      <span class="navbar-toggler-icon"></span>
 			    </button>
 			    
+			    <!-- Pesquisa
+			    	<form method="post" action="pagina_de_resultados.html">
+					  <input type="text" name="q" value="Pesquisar...">
+					  <input type="submit" value="Pesquisar">
+					</form>
+			     -->
+			    
 			    <div class="nav justify-contente-center">
 				    <form class="d-flex">
 				        <input class="form-control me-3" type="search" placeholder="Pesquise aqui" aria-label="Search">
@@ -53,10 +60,6 @@
 					          <a class="nav-link active" href="#">Envie sua receita</a>
 					        </li>
 					        
-					        <li class="nav-item">
-					          <a class="nav-link active" href="Login.jsp">Entrar</a>
-					        </li>
-					        
 					        <li>
 					        	<% 
 					        		String user = (String) session.getAttribute("user"); 
@@ -66,11 +69,9 @@
 					        	%>
 						        	<div class="dropdown">
 									  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    Dropdown button
+									    ${ user }
 									  </button>
 									  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-									    <a class="dropdown-item" href="#">Olá ${ user }</a>
-									  	
 									    <a class="dropdown-item" href="usuariosadd.jsp">Adicionar</a>
 									    <a class="dropdown-item" href="usuarioscon.jsp">Ver todos</a>
 									    <a class="dropdown-item" href="usuariosedit.jsp">Editar Cadastro</a>								    								    
@@ -78,7 +79,7 @@
 									  </div>
 									</div>
 								<% } else { %>
-									<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+									<a class="nav-link active" href="Login.jsp">Entrar</a>
 								<% } %>
 					        </li>
 					      </ul>
@@ -91,20 +92,20 @@
 	<!-- Categorias -->
 	
 	<div>
-		<nav class="navbar navbar-dark bg-secundary" style="background-color: gray;" >
+		<nav class="navbar navbar-dark bg-secundary" style="background-color: #778899;" >
 		
 		  <div class="container-fluid">
 		  
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
-		    <button type="button" class="btn btn-primary">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn btn-outline-light">Categoria</button>
 		    
 		  </div>
 		  

@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <c:import url="header.jsp"/>
+    <c:import url="utils/header.jsp"/>
     <div style="margin: 3% auto"></div>
     <div class="container">
     <a href="receitasadd.jsp">Nova Receita</a>
@@ -60,6 +60,6 @@
         </table>    
     </c:if>
     </div>
-    <c:import url="footer.html"/>
+    <c:import url="utils/footer.html"/>
 </body>
 </html>

@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 	<body>
-		<c:import url="header.jsp"/>
+		<c:import url="utils/header.jsp"/>
 		
 		<div class="container">
 			<h1 style="text-align: center;">Bem-Vindo!</h1>
@@ -18,47 +18,59 @@
 				<form action="controllerusuario" method="post">
 				
 					<div class="form-row">
-					
-						<div class="col">
-							<label>Nome</label>
-							<input type="text" name="nome" class="form-control"/>
-							<br/>
+						
+						<div class="row">
+							<div class="col">
+								<label>Nome</label>
+								<input type="text" name="nome" class="form-control"/>
+								<br/>
+							</div>
+								
+							<div class="col">
+								<label>Senha</label>
+								<input type="password" name="senha" class="form-control"/>
+								<br/>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col">
+								<label>Data de Nascimento</label>
+								<input type="text" name="datanascimento" class="form-control"/>
+								<br/>
+							</div>
+								
+							<div class="col">
+								<label>Localização</label>
+								<input type="text" name="localizacao" class="form-control"/>
+								<br/>
+							</div>
 						</div>
 							
-						<div class="col">
-							<label>Senha</label>
-							<input type="password" name="senha" class="form-control"/>
-							<br/>
+						<div class="row">
+							<div class="col">
+								<label>Email</label>
+								<input type="text" name="email" class="form-control"/>
+								<br/>
+							</div>
+								
+							<div class="col">
+								<label>Admin</label>
+								<input type="text" name="admin" class="form-control"/>
+								<br/>
+							</div>
 						</div>
-							
-						<div class="col">
-							<label>Data de Nascimento</label>
-							<input type="text" name="datanascimento" class="form-control"/>
-							<br/>
-						</div>
-							
-						<div class="col">
-							<label>Localização</label>
-							<input type="text" name="localizacao" class="form-control"/>
-							<br/>
-						</div>
-							
-						<div class="col">
-							<label>Sexo</label>
-							<input type="text" name="sexo" class="form-control"/>
-							<br/>
-						</div>
-							
-						<div class="col">
-							<label>Email</label>
-							<input type="text" name="email" class="form-control"/>
-							<br/>
-						</div>
-							
-						<div class="col">
-							<label>Admin</label>
-							<input type="text" name="admin" class="form-control"/>
-							<br/>
+						
+						<div>
+							<label>Sexo</label><br/>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="Masculino" name="sexo"/>
+								<label class="form-check-label" for="Masculino">Masculino</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="Feminino" name="sexo"/>
+								<label class="form-check-label" for="Feminino">Feminino</label>
+							</div>
 						</div>
 						
 					</div>
@@ -66,6 +78,6 @@
 				</form>
 		</div>
 		
-		<c:import url="footer.html"/>
+		<c:import url="utils/footer.html"/>
 	</body>
 </html>
