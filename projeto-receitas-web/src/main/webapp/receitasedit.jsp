@@ -51,7 +51,7 @@
             
             <div class="col">
                 <label>Tempo de Preparo</label>
-                <input type="text" name="tempopreparo" value="${receita.descricao}" class="form-control"/>
+                <input type="text" name="tempopreparo" value="${receita.tempopreparo}" class="form-control"/>
                 <br/>
             </div>
 		        <label>Url Foto</label>

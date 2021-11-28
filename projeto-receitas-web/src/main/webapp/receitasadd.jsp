@@ -26,7 +26,7 @@
 
 			<%
 				session = request.getSession();
-				int iduser = (int) session.getAttribute("id");
+				Integer iduser = (Integer) session.getAttribute("id");
 			%>
     		     
 		     <div class="col">		      

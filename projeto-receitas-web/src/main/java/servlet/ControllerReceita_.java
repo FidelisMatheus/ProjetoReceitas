@@ -159,19 +159,14 @@ public class ControllerReceita_ extends HttpServlet {
 		    //String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
 		    //InputStream fileContent = filePart.getInputStream();
 			
-			
-			receita.setUrlfoto(request.getParameter("urlfoto"));
-			
-			
-			
-			
+			//receita.setUrlfoto(request.getParameter("urlfoto"));
 			//aqui vou pegar o usuario e ingredientes por sessão
 			UsuarioDao daousuario = new UsuarioDao();
 			
 			int usuarioid = Integer.parseInt(request.getParameter("usuarioid"));
 			Usuario usuario = daousuario.get(usuarioid);
 			
-			receita.setUsuario(usuario);
+			//receita.setUsuario(usuario);
 			//receita.setIngrediente(request.getParameter("listaIngredientes"));
 			
 			
