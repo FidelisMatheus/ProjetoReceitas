@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html>
+<link href="css/geral.css" rel="stylesheet">
 <head>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +17,22 @@
 	<script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"  crossorigin="anonymous"></script>
 </head>
 <body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');}
+</style>
 	<div>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav style="background:white !important" class="navbar navbar-expand-lg navbar-dark bg-dark">
 		
 		  <div class="container-fluid">
-		  
-			    <a class="navbar-brand" href="Home.jsp">
+		  		
+		  		<div>
+			    <a style="display: flex;flex-direction: row;align-items: center;" class="navbar-brand" href="Home.jsp">
 			    	<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-			    	Receitas de Casa
+			    	<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;
+			    	 ">RECEITAS DE CASA</h2>
 			    </a>
+			    </div>
 			    
 			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			      <span class="navbar-toggler-icon"></span>
@@ -39,25 +47,31 @@
 			    
 			    <div class="nav justify-contente-center">
 				    <form class="d-flex">
-				        <input class="form-control me-3" type="search" placeholder="Pesquise aqui" aria-label="Search">
-				        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+				        <input style="border-radius:15px;border-color: #DBDBDB;font-size: 12px;width: 235px;height: 35px;" class="form-control me-3" type="search" placeholder="Pesquise aqui" aria-label="Search">
+				        <button class="btn-pesq" type="submit">Pesquisar</button>
 				    </form>
 			    </div>
 		    
 			    <div>
 				    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				    
-					      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					        <li class="nav-item">
+					      <ul class="header-direita">
+					        <!--<li class="nav-item">
 					          <a class="nav-link active" aria-current="page" href="Home.jsp">Home</a>
+					        </li>-->
+					        
+					        <li>
+					          <a href="usuariosadd.jsp">
+					          <img style="width: 20px;height: 20px;" src="./images/cadastrar.png"  alt="">
+					          <h6>Cadastrar-se</h6>
+					          </a>
 					        </li>
 					        
-					        <li class="nav-item">
-					          <a class="nav-link active" href="usuariosadd.jsp">Cadastrar-se</a>
-					        </li>
-					        
-					        <li class="nav-item">
-					          <a class="nav-link active" href="#">Envie sua receita</a>
+					        <li>
+					          <a href="#">
+					          <img style="width: 20px;height: 20px;" src="./images/receita.png"  alt="">
+					          <h6>Envie sua receita</h6>
+					          </a>
 					        </li>
 					        
 					        <li>
@@ -79,7 +93,10 @@
 									  </div>
 									</div>
 								<% } else { %>
-									<a class="nav-link active" href="Login.jsp">Entrar</a>
+									<a href="Login.jsp">
+									<img style="width: 20px;height: 20px;" src="./images/entrar.png"  alt="">
+									<h6>Entrar</h6>
+									</a>
 								<% } %>
 					        </li>
 					      </ul>
@@ -96,16 +113,16 @@
 		
 		  <div class="container-fluid">
 		  
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
-		    <button type="button" class="btn btn-outline-light">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
+		    <button type="button" class="btn-nav">Categoria</button>
 		    
 		  </div>
 		  

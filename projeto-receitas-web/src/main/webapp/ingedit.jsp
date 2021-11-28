@@ -3,6 +3,7 @@
     <%@page import="model.Ingrediente"%>
 <%@page import="dao.IngredienteDao"%>
 <%@page import="enuns.UnidadeMedida"%>
+<%@page import="servlet.ControllerIngredientes"%>
 <!DOCTYPE html>
 <html>
 <head>

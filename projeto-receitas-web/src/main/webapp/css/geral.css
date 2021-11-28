@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+
+
+/* Pesquisa */
+
+.btn-pesq{
+	background: linear-gradient( 
+54deg, #EF7D00, #FFD922);
+    width: 98px;
+    height: 31px;
+    border-radius: 200px;
+    color: #FFFFFF;
+    border: none;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+
+/* Header */
+.header-direita{
+	display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+}
+
+.header-direita li{
+	list-style:none;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 13px;
+}
+
+.header-direita a{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #EF7D00;
+    text-decoration: none;
+}
+
+.header-direita a:hover{
+    color: #EF7D00;
+    text-decoration: none;
+}
+
+.header-direita h6{
+font-size: 13px;	
+color:black;
+}
+
+.navbar{
+background: linear-gradient( 
+54deg, #EF7D00, #FFD922);
+}
+
+.btn-nav{
+	color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.text-lg-start{
+	background-color: #002330 !important;
+}
+
+.card{
+	padding:0 !important;
+	border:1px solid #ADB5BD !important;
+	border-radius: 20px !important;
+}
+
+.card-text{
+	text-align: center;
+}
+
+
+

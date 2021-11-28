@@ -6,6 +6,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="css/geral.css" rel="stylesheet">
 <head>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,13 +14,17 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 	<body>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');}
+</style>
+
 		<c:import url="utils/header.jsp"/>
 		
 		<div class="container">
 			
 			<div style="margin: 5% auto"></div>
 			
-			<h1 style="text-align: center;">Destaques</h1>
+			<h1 style="text-align: center; color:black; font-family:'Poppins';">DESTAQUES</h1>
 			
 			<div style="margin: 5% auto"></div>
 			
@@ -27,7 +32,6 @@
 				<div class="card" style="width: 50rem;">
 				  <img class="card-img-top" src="<c:url value="./images/bolo.jpg" />" alt="Imagem de capa do card"/>
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
 				  </div>
 				</div>
 			</div>
@@ -61,7 +65,7 @@
 		<!-- Divisor -->
 			<div style="margin: 5% auto"></div>
 			
-			<h1 style="text-align: center;">Recentes</h1>
+			<h1 style="text-align: center; font-family:'Poppins';">RECENTES</h1>
 			
 		<!-- Divisor -->	
 			<div style="margin: 5% auto"></div>
