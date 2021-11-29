@@ -52,6 +52,7 @@
                         <td scope="row">
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
+                            <a href="${pageContext.request.contextPath}/exibicaoreceita?action=exibir&id=${receita.id}">Ver Receita</a>
                         </td>
                                                                     
                     </tr>                
