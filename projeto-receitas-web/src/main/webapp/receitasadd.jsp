@@ -57,7 +57,7 @@
 			 <div style="margin: 2% auto"></div>
 			 <div class="row">
 				 <div class="col-6">
-	                 <label>Url Foto</label> 
+	                 <label>Envie Fotos</label> 
 	                <input type="file" name="dataFile" class="form-control"/>            
 	            </div>
 				 <div class="col-6">
@@ -87,7 +87,7 @@
 			  <div class="col">      
                 <h4 style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">INGREDIENTES</h4>          
                 <label>Liste os ingredientes e suas quantidades aqui</label> 
-                <textarea class="form-control" id="descricao" rows="5" name="ingredientes" placeholder="Exemplo: &#10;1 xícara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
+                <textarea class="form-control" id="ingredientes" rows="5" name="ingredientes" placeholder="Exemplo: &#10;1 xícara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
              </div>
 			 
 			 <div class="col">			     
@@ -98,9 +98,28 @@
 
 			
 			<input type="hidden" name="usuarioid" value="${iduser}"/>
-
-		
-			<div
+            
+            <div style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">        
+                <h3>ATENÇÃO ANTES DE ENVIAR</h3>
+                <br/>                                  
+            </div>            
+            <div style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
+                <label>
+                   Revise toda sua receita para que tenha certeza que não esta faltando nada.<br/>
+                   
+               </label>
+            </div>
+            <div style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
+                <label>
+                    Não envie fotos de terceiros, apenas foto de sua autoria.<br/>                   
+               </label>
+            </div>
+            <div style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
+                <label>
+                    As informações poderão ser alteradas caso haja erros.<br/>                   
+               </label>
+            </div>            
+            <div
 				style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 				<input type="submit" value="Enviar Receita" class="btn btn-primary"
 					/>

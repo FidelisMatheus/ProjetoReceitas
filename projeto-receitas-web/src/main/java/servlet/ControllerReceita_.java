@@ -75,8 +75,8 @@ public class ControllerReceita_ extends HttpServlet {
 			receita = daoReceita.get(receitaId);
 			
 			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
-			receita.setDescricao(request.getParameter("descricao"));
-			receita.setModoPreparo(request.getParameter("mododepreparo"));
+			receita.setDescricao(request.getParameter("ingredientes"));
+			receita.setModoPreparo(request.getParameter("modopreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));
@@ -92,8 +92,8 @@ public class ControllerReceita_ extends HttpServlet {
 			
 			Receita receita = new Receita();
 			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
-			receita.setDescricao(request.getParameter("descricao"));
-			receita.setModoPreparo(request.getParameter("mododepreparo"));
+			receita.setDescricao(request.getParameter("ingredientes"));
+			receita.setModoPreparo(request.getParameter("modopreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));
@@ -104,16 +104,15 @@ public class ControllerReceita_ extends HttpServlet {
 		    //String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
 		    //InputStream fileContent = filePart.getInputStream();
 			
-<<<<<<< Updated upstream
+
 			//receita.setUrlfoto(request.getParameter("urlfoto"));
-=======
+
 			
 			//receita.setUrlfoto(request.getParameter("urlfoto"));
 
 			//receita.setIngrediente(request.getParameter("listaIngredientes"));
 					
-			
->>>>>>> Stashed changes
+
 			//aqui vou pegar o usuario e ingredientes por sessão
 			UsuarioDao daousuario = new UsuarioDao();
 			
@@ -121,13 +120,11 @@ public class ControllerReceita_ extends HttpServlet {
 			
 			int usuarioid = (int) session.getAttribute("id");
 			Usuario usuario = daousuario.get(usuarioid);
-			
-<<<<<<< Updated upstream
+
 			//receita.setUsuario(usuario);
 			//receita.setIngrediente(request.getParameter("listaIngredientes"));
-=======
+			
 			receita.setUsuario(usuario);
->>>>>>> Stashed changes
 			
 			
 			daoReceita.save(receita);
