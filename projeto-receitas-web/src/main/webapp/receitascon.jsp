@@ -32,10 +32,11 @@
             <thead>
                 <tr>
                     <th scope="col">Título</th>
-                    <th scope="col">Descrição</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Modo de Preparo</th>
                     <th scope="col">Porção</th>
                     <th scope="col">Tempo de Preparo</th>
+                    <th scope="col">Ingredientes</th>
                     <th scope="col">Ações</th>
                 </tr>                                
             </thead>
@@ -44,10 +45,11 @@
                 <c:forEach var="receita" items="${listadereceitas}">
                     <tr>
                         <td scope="row">${receita.titulo}</td>
-                        <td scope="row">${receita.descricao}</td>
+                        <td scope="row">${receita.categoria}</td>
                         <td scope="row">${receita.modoPreparo}</td>
                         <td scope="row">${receita.porcao}</td>
                         <td scope="row">${receita.tempoPreparo}</td>
+                        <td scope="row">${receita.descricao}</td>
                         
                         <td scope="row">
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>

@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import org.apache.tomcat.util.http.fileupload.FileItem;
@@ -25,6 +26,7 @@ import java.util.List;
 
 import dao.ReceitaDao;
 import dao.UsuarioDao;
+import enuns.CategoriaReceita;
 import model.Receita;
 import model.Usuario;
 
@@ -33,10 +35,6 @@ import model.Usuario;
 @MultipartConfig
 public class ControllerReceita_ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	private static final String DATA_DIRECTORY = "data";
-	private static final int MAX_MEMORY_SIZE = 1024 * 1024 * 2;
-	private static final int MAX_REQUEST_SIZE = 1024 * 1024;
 	
     public ControllerReceita_() {
         super();
@@ -64,60 +62,7 @@ public class ControllerReceita_ extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		//check that we have a file upload request
-		boolean isMultipart = ServletFileUpload.isMultipartContent(request);
-		String filePath = "";
-		
-		if(!isMultipart) {
-			return;
-		}
-		
-		//create a factory for disk-based file items
-		FileItemFactory factory = new DiskFileItemFactory();
-				
-		//constructs the folder where uploaded file will be stored
-		//String uploadFolder = getServletContext().getRealPath("") + File.separator + DATA_DIRECTORY;
-		
-		//create a new file upload handler
-		ServletFileUpload upload = new ServletFileUpload(factory);
-		
-		//set overall request size constraint
-		//upload.setSizeMax(MAX_REQUEST_SIZE);
-		
-		try {
-			
-			//Parse the request
-			List<FileItem> items = upload.parseRequest((RequestContext) request);
-			Iterator<FileItem> iter = items.iterator();
-			
-			while(iter.hasNext()) {
-				FileItem item = (FileItem) iter.next();
-			
-				if(!item.isFormField()) {
-					String fileName = item.getName();
-					String root =getServletContext().getRealPath("/");					
-					filePath = root + "/data";
-					File path = new File(filePath);
-					
-					if(!path.exists()) {
-						boolean status = path.mkdirs();
-					}
-					
-					File uploadedFile = new File(path + "/" + fileName);
-					
-					//saves the file to upload directory
-					item.write(uploadedFile);
-				}
-			}
-					
-			
-		} catch (FileUploadException ex){
-			throw new ServletException(ex);
-		}catch(Exception ex) {
-			throw new ServletException(ex);
-		}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {					
 		
 		
 		ReceitaDao daoReceita = new ReceitaDao();
@@ -129,13 +74,13 @@ public class ControllerReceita_ extends HttpServlet {
 			Receita receita = new Receita();
 			receita = daoReceita.get(receitaId);
 			
-			//receita.setCategoria(request.getParameter("categoria"));
+			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
 			receita.setDescricao(request.getParameter("descricao"));
 			receita.setModoPreparo(request.getParameter("mododepreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));
-			receita.setUrlfoto(filePath);
+			//receita.setUrlfoto(filePath);
 			
 			//aqui vou pegar o usuario e ingredientes por sessão
 			//receita.setUsuario(usuario);
@@ -146,7 +91,7 @@ public class ControllerReceita_ extends HttpServlet {
 		} else {
 			
 			Receita receita = new Receita();
-			//receita.setCategoria(request.getParameter("categoria"));
+			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
 			receita.setDescricao(request.getParameter("descricao"));
 			receita.setModoPreparo(request.getParameter("mododepreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
@@ -159,15 +104,30 @@ public class ControllerReceita_ extends HttpServlet {
 		    //String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); // MSIE fix.
 		    //InputStream fileContent = filePart.getInputStream();
 			
+<<<<<<< Updated upstream
 			//receita.setUrlfoto(request.getParameter("urlfoto"));
+=======
+			
+			//receita.setUrlfoto(request.getParameter("urlfoto"));
+
+			//receita.setIngrediente(request.getParameter("listaIngredientes"));
+					
+			
+>>>>>>> Stashed changes
 			//aqui vou pegar o usuario e ingredientes por sessão
 			UsuarioDao daousuario = new UsuarioDao();
 			
-			int usuarioid = Integer.parseInt(request.getParameter("usuarioid"));
+			HttpSession session = request.getSession();
+			
+			int usuarioid = (int) session.getAttribute("id");
 			Usuario usuario = daousuario.get(usuarioid);
 			
+<<<<<<< Updated upstream
 			//receita.setUsuario(usuario);
 			//receita.setIngrediente(request.getParameter("listaIngredientes"));
+=======
+			receita.setUsuario(usuario);
+>>>>>>> Stashed changes
 			
 			
 			daoReceita.save(receita);
