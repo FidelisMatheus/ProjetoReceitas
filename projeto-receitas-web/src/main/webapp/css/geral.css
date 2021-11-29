@@ -15,6 +15,10 @@
     margin-top: 2px;
 }
 
+.btn-pesq:hover{
+background: #EF7D00;
+}
+
 
 /* Header */
 .header-direita{
@@ -52,12 +56,12 @@ color:black;
 }
 
 .navbar{
-background: linear-gradient( 
-54deg, #EF7D00, #FFD922);
+background: white;
+border-bottom: 1px solid #dbdbdb;
 }
 
 .btn-nav{
-	color: white;
+	color: black;
     background-color: transparent;
     border: none;
 }

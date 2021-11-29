@@ -5,6 +5,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="css/forms.css" rel="stylesheet">
 <link href="css/geral.css" rel="stylesheet">
 <head>
 	<meta charset="ISO-8859-1">
@@ -19,33 +20,37 @@
 		<c:import url="utils/header.jsp"/>
 		
 		<div class="container" style="margin-top:50px">
-			<h3 style="text-align: center;font-family:'Poppins';">Acesse sua Conta!</h3>
+			<h3 style="text-align: center;font-family:'Poppins'; margin-bottom:30px;">Acesse sua Conta!</h3>
 			
 			<div class="align-items-center">
 				<form action="loginservlet" method="post">
 				
-					<div class="row justify-content-center">
+				<div class="form-geral">
+					<div class="">
 					
 						<div class="col-6">
-							<label>Email</label>
-							<input type="email" name="user" class="form-control"/>
+							<label>Email:</label>
+							<input type="email" name="user" class="form-style"/>
 							<br/>
 						</div>
 						
 					</div>
 					
-					<div class="row justify-content-center">
+					<div class="">
 						<div class="col-6">
-							<label>Senha</label>
-							<input type="password" name="pwd" class="form-control"/>
+							<label>Senha:</label>
+							<input type="password" name="pwd" class="form-style"/>
 							<br/>
 						</div>
 					</div>
 					
 					<div class="row justify-content-center">
 						<div class="col-6">
-							<input type="submit" value="Entrar" class="btn btn-primary" />
+						<div style="text-align:center;margin-top:30px;margin-right: 185px;">
+							<input type="submit" value="Entrar" class="btn-confirmar" />
+							</div>
 						</div>
+					</div>
 					</div>
 				</form>
 			</div>

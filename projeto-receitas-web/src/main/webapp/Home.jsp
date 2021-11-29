@@ -24,7 +24,7 @@
 			
 			<div style="margin: 5% auto"></div>
 			
-			<h1 style="text-align: center; color:black; font-family:'Poppins';">DESTAQUES</h1>
+			<h1 style="text-align: center; color:black; font-family:'Poppins';font-size: 28px;">DESTAQUES</h1>
 			
 			<div style="margin: 5% auto"></div>
 			
@@ -44,7 +44,7 @@
 				<div class="col-2"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo2.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
 				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
 				  </div>
@@ -65,7 +65,7 @@
 		<!-- Divisor -->
 			<div style="margin: 5% auto"></div>
 			
-			<h1 style="text-align: center; font-family:'Poppins';">RECENTES</h1>
+			<h1 style="text-align: center; font-family:'Poppins';font-size: 28px;">RECENTES</h1>
 			
 		<!-- Divisor -->	
 			<div style="margin: 5% auto"></div>

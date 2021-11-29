@@ -109,8 +109,8 @@
 	<!-- Categorias -->
 	
 	<div>
-		<nav class="navbar navbar-dark bg-secundary" style="background-color: #778899;" >
-		
+		<nav class="navbar navbar-dark bg-secundary">
+    		
 		  <div class="container-fluid">
 		  
 		    <button type="button" class="btn-nav">Categoria</button>

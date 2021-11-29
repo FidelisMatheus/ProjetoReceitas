@@ -9,6 +9,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="css/consultar.css" rel="stylesheet">
 <head>
 
     <meta charset="ISO-8859-1">
@@ -21,7 +22,10 @@
     <c:import url="utils/header.jsp"/>
     <div style="margin: 3% auto"></div>
     <div class="container">
+    
+    <div class="btn-add">
     <a href="receitasadd.jsp">Nova Receita</a>
+    </div>
     
     <jsp:useBean id="daoreceita" class="dao.ReceitaDao" />
     <c:set var="listadereceitas" value="${daoreceita.all}"/>
@@ -30,19 +34,19 @@
         
         <table class="table">
             <thead>
-                <tr>
-                    <th scope="col">Título</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">Modo de Preparo</th>
-                    <th scope="col">Porção</th>
-                    <th scope="col">Tempo de Preparo</th>
-                    <th scope="col">Ações</th>
+                <tr style="background: linear-gradient(320deg, #EF7D00, #FFD922); border-bottom: 2px solid transparent;">
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Título</th>
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Descrição</th>
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Modo de Preparo</th>
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Porção</th>
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Tempo de Preparo</th>
+                    <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'" scope="col">Ações</th>
                 </tr>                                
             </thead>
             <tbody>
                 
                 <c:forEach var="receita" items="${listadereceitas}">
-                    <tr>
+                    <tr style="background-color: #e5e4e2;">
                         <td scope="row">${receita.titulo}</td>
                         <td scope="row">${receita.descricao}</td>
                         <td scope="row">${receita.modoPreparo}</td>
@@ -50,8 +54,16 @@
                         <td scope="row">${receita.tempoPreparo}</td>
                         
                         <td scope="row">
+                        
+                        <div style="display:flex;flex-direction: row;justify-content: space-around;">
+                        <div class="btn-acao">
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>
+                            </div>
+                            
+                            <div class="btn-acao">
                             <a href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
+                       		</div>
+                        </div>
                         </td>
                                                                     
                     </tr>                

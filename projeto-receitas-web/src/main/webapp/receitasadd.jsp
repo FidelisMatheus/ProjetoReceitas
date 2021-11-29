@@ -4,6 +4,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="css/geral.css" rel="stylesheet">
 <head>
 <meta charset="ISO-8859-1">
 
@@ -16,6 +17,9 @@
 
 </head>
 <body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');}
+</style>
 	<c:import url="utils/header.jsp" />
 
 	<div class="container">
