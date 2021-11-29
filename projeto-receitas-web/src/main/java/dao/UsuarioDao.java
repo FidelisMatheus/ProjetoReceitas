@@ -5,6 +5,7 @@ import java.util.function.Consumer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
 import model.Usuario;
 
@@ -51,6 +52,14 @@ public class UsuarioDao implements Dao<Usuario> {
 	@Override
 	public void delete(Usuario objeto) {
 		executeInsideTransaction(em->em.remove(objeto));
+	}
+	
+	public Usuario getEmailSenha(String email, String senha) {
+		TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.email = '" + email + "' AND u.senha = '" + senha + "'" , Usuario.class);
+		if(query.getSingleResult() != null)
+			return query.getSingleResult();
+		else
+			return null;
 	}
 	
 }

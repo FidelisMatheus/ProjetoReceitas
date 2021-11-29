@@ -1,4 +1,4 @@
-package servlets;
+package servlet;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -20,7 +20,7 @@ import model.Ingrediente;
  * Servlet implementation class ControllerIngredientes
  */
 
-@WebServlet("/list")
+@WebServlet("/controlleringredientes")
 public class ControllerIngredientes extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -7,6 +7,7 @@
 <%@page import="model.Ingrediente"%>
 <%@page import="dao.IngredienteDao"%>
 <%@page import="enuns.UnidadeMedida"%>
+<%@page import="servlet.ControllerIngredientes"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 <% UnidadeMedida[] unidades = UnidadeMedida.values(); %>
 
 
-<form action="ControllerIngredientes" method="post">
+<form action="controlleringredientes" method="post">
 
 	<label>Nome</label>
 	<input type="text" name="nome"/>

@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+
+.form-style{
+	border-radius: 10px;
+	border: 1px solid #DBDBDB;
+    margin-top: 15px;
+    width: 250px;
+    height: 45px;
+    padding-left: 15px;
+}
+
+.form-style:focus-visible{
+	outline: 1px solid #FFD922 !important; 
+}
+
+.form-geral{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.form-check-input:checked{
+	background-color: #FFD922 !important;
+    border-color: #FFD922 !important;
+}
+
+.btn-confirmar{
+	background: linear-gradient( 
+54deg, #EF7D00, #FFD922);
+    width: 98px;
+    height: 31px;
+    border-radius: 200px;
+    color: #FFFFFF;
+    border: none;
+    font-size: 13px;
+}
+
+.btn-confirmar:hover{
+	background: #EF7D00;
+}
