@@ -6,7 +6,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<link href="css/geral.css" rel="stylesheet">
+<link href=".css/geral.css" rel="stylesheet">
 <head>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,9 +29,11 @@
 			<div style="margin: 5% auto"></div>
 			
 			<div class='row d-flex justify-content-center' style="align: center;">
-				<div class="card" style="width: 50rem;">
-				  <img class="card-img-top" src="<c:url value="./images/bolo.jpg" />" alt="Imagem de capa do card"/>
+				<div class="card" style="width: 39rem;">
+				  <img class="card-img-top" src="<c:url value="./images/esfirra.jpg" />" alt="Imagem de capa do card"/>
 				  <div class="card-body">
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">ESFIHA DE CARNE ADAPTADA</h3>
+				   <p style="color: #868e96;" class="card-text">Deliciosa esfiha de carne, com uma massa bem fofa. É uma receita turca.</p>
 				  </div>
 				</div>
 			</div>
@@ -44,18 +46,20 @@
 				<div class="col-2"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo2.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/frango_milanesa.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FILÉ DE FRANGO À MILANESA</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso filé de frango à milanesa, muito crocante, ótimo para porções.</p>
 				  </div>
 				</div>
 				
 				<div class="col-1"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo2.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/fricasse.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">PANQUECA DE CARNE MOÍDA</h3>
+				    <p style="color: #868e96;" class="card-text">Deliciosa panqueca de carne moída, uma refeição leve e rende 10 porções.</p>
 				  </div>
 				</div>
 				
@@ -75,18 +79,20 @@
 				<div class="col-2"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/misto_forno.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">MISTO QUENTE DE FORNO</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso misto-quente de forno, pra quem quer uma receita rápida e muito gostosa.</p>
 				  </div>
 				</div>
 				
 				<div class="col-1"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/mousse_limao.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">MOUSSE DE LIMÃO</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso mousse de limão, pra quem quer uma sobremesa simples e rápida de ser feita.</p>
 				  </div>
 				</div>
 				
@@ -101,18 +107,20 @@
 				<div class="col-2"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/panqueca.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FRICASSÊ DE FRANGO</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso fricassê de frango, receita fácil e rápido de se fazer.</p>
 				  </div>
 				</div>
 				
 				<div class="col-1"></div>
 				
 				<div class="card col" style="width: 18rem;">
-				  <img class="card-img-top" src="<c:url value="./images/paoDeQueijo.jpg" />" alt="Imagem de capa do card">
+				  <img class="card-img-top" src="<c:url value="./images/strogonoff.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				    <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">ESTROGONOFE DA CASA</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso estrogonofe da casa, ótimo para refeições em família. Rende 4 porções.</p>
 				  </div>
 				</div>
 				

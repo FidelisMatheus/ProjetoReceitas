@@ -6,6 +6,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<link href="css/exibicao_receita.css" rel="stylesheet">
 <head>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,42 +23,42 @@
 		<div class="container">
 			<input type="hidden" name="receitaid" value="${receita.id}"/>
 			
-			<div class="card mb-2">
+			<div style="display:flex;justify-content: center;">
+			<div style="margin-top: 75px; width:70%" class="card mb-2">
 			  <img src="<c:url value="./images/paoDeQueijo.jpg" />" class="card-img-top" alt="...">
 			  <div class="card-body">
-			    <h5 class="card-title">Card title</h5>
+			    <h5 style="font-family: 'Poppins';text-align: center;" class="card-title">Card title</h5>
 			    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 			    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
 			</div>
+			</div>
 			
-			<div class="justify-content-center">
-	            <div class="col" style="margin: 0 auto; border-style: solid; ">        
-		            <label>Título</label>
-		            <br/>
-		            <label>${receita.titulo}</label>
+			<div style="margin-top: 40px;" class="justify-content-center">
+	            <div class="col" style="margin: 0 auto;">        
+		            <label style="text-align:center">${receita.titulo}</label>
 	            </div> 
 	            
-	            <div class="col" style="margin: 0 auto; border-style: solid; ">        
-		            <label>Ingredientes</label>
+	            <div class="col" style="margin: 0 auto;">        
+		            <label>Ingredientes:</label>
 		            <br/>
 		            <label>${receita.descricao}</label>
 	            </div>
 	            
-	            <div class="col" style="margin: 0 auto; border-style: solid; ">        
-		            <label>Modo de Preparo</label>
+	            <div class="col" style="margin: 0 auto;">        
+		            <label>Modo de Preparo:</label>
 		            <br/>
 		            <label>${receita.modoPreparo}</label>
 	            </div>
 	            
-	            <div class="col" style="margin: 0 auto; border-style: solid; ">        
-		            <label>Porção</label>
+	            <div class="col" style="margin: 0 auto;">        
+		            <label>Porção:</label>
 		            <br/>
 		            <label>${receita.porcao}</label>
 	           </div>
 	           
-	           <div class="col" style="margin: 0 auto; border-style: solid; ">        
-		            <label>Tempo de Preparo</label>
+	           <div class="col" style="margin: 0 auto;">        
+		            <label>Tempo de Preparo:</label>
 		            <br/> 
 		            <label>${receita.tempoPreparo}</label>
 	           </div>  
