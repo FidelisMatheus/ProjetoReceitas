@@ -33,7 +33,7 @@
 				  <img class="card-img-top" src="<c:url value="./images/esfirra.jpg" />" alt="Imagem de capa do card"/>
 				  <div class="card-body">
 				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">ESFIHA DE CARNE ADAPTADA</h3>
-				   <p style="color: #868e96;" class="card-text">Deliciosa esfiha de carne, com uma massa bem fofa. É uma receita turca.</p>
+				   <p style="color: #868e96;" class="card-text">Deliciosa esfiha de carne, com uma massa bem fofa. ï¿½ uma receita turca.</p>
 				  </div>
 				</div>
 			</div>
@@ -48,8 +48,8 @@
 				<div class="card col" style="width: 18rem;">
 				  <img class="card-img-top" src="<c:url value="./images/frango_milanesa.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FILÉ DE FRANGO À MILANESA</h3>
-				    <p style="color: #868e96;" class="card-text">Delicioso filé de frango à milanesa, muito crocante, ótimo para porções.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FILï¿½ DE FRANGO ï¿½ MILANESA</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso filï¿½ de frango ï¿½ milanesa, muito crocante, ï¿½timo para porï¿½ï¿½es.</p>
 				  </div>
 				</div>
 				
@@ -58,8 +58,8 @@
 				<div class="card col" style="width: 18rem;">
 				  <img class="card-img-top" src="<c:url value="./images/fricasse.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">PANQUECA DE CARNE MOÍDA</h3>
-				    <p style="color: #868e96;" class="card-text">Deliciosa panqueca de carne moída, uma refeição leve e rende 10 porções.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">PANQUECA DE CARNE MOï¿½DA</h3>
+				    <p style="color: #868e96;" class="card-text">Deliciosa panqueca de carne moï¿½da, uma refeiï¿½ï¿½o leve e rende 10 porï¿½ï¿½es.</p>
 				  </div>
 				</div>
 				
@@ -82,7 +82,7 @@
 				  <img class="card-img-top" src="<c:url value="./images/misto_forno.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
 				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">MISTO QUENTE DE FORNO</h3>
-				    <p style="color: #868e96;" class="card-text">Delicioso misto-quente de forno, pra quem quer uma receita rápida e muito gostosa.</p>
+				    <p style="color: #868e96;" class="card-text">Delicioso misto-quente de forno, pra quem quer uma receita rï¿½pida e muito gostosa.</p>
 				  </div>
 				</div>
 				
@@ -91,8 +91,8 @@
 				<div class="card col" style="width: 18rem;">
 				  <img class="card-img-top" src="<c:url value="./images/mousse_limao.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">MOUSSE DE LIMÃO</h3>
-				    <p style="color: #868e96;" class="card-text">Delicioso mousse de limão, pra quem quer uma sobremesa simples e rápida de ser feita.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">MOUSSE DE LIMï¿½O</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso mousse de limï¿½o, pra quem quer uma sobremesa simples e rï¿½pida de ser feita.</p>
 				  </div>
 				</div>
 				
@@ -109,8 +109,8 @@
 				<div class="card col" style="width: 18rem;">
 				  <img class="card-img-top" src="<c:url value="./images/panqueca.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
-				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FRICASSÊ DE FRANGO</h3>
-				    <p style="color: #868e96;" class="card-text">Delicioso fricassê de frango, receita fácil e rápido de se fazer.</p>
+				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">FRICASSï¿½ DE FRANGO</h3>
+				    <p style="color: #868e96;" class="card-text">Delicioso fricassï¿½ de frango, receita fï¿½cil e rï¿½pido de se fazer.</p>
 				  </div>
 				</div>
 				
@@ -120,7 +120,7 @@
 				  <img class="card-img-top" src="<c:url value="./images/strogonoff.jpg" />" alt="Imagem de capa do card">
 				  <div class="card-body">
 				  <h3 style="text-align: center;font-size: 18px;font-family: 'Poppins';">ESTROGONOFE DA CASA</h3>
-				    <p style="color: #868e96;" class="card-text">Delicioso estrogonofe da casa, ótimo para refeições em família. Rende 4 porções.</p>
+				    <p style="color: #868e96;" class="card-text">Delicioso estrogonofe da casa, ï¿½timo para refeiï¿½ï¿½es em famï¿½lia. Rende 4 porï¿½ï¿½es.</p>
 				  </div>
 				</div>
 				
