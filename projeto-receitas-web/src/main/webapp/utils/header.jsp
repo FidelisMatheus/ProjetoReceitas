@@ -99,12 +99,12 @@
 												<% String user=(String) session.getAttribute("user"); if (user !=null) {
 													session=request.getSession(); %>
 													<div class="dropdown">
-														<button class="btn btn-secondary dropdown-toggle" type="button"
+														<button style="background-color:#EF7D00;border:none;" class="btn btn-secondary dropdown-toggle" type="button"
 															id="dropdownMenuButton" data-toggle="dropdown"
 															aria-haspopup="true" aria-expanded="false">
 															${ user }
 														</button>
-														<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+														<div style="width:100%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 															<a class="dropdown-item"
 																href="usuariosadd.jsp">Adicionar</a>
 															<a class="dropdown-item" href="usuarioscon.jsp">Ver
