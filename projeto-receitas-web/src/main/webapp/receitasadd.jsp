@@ -49,7 +49,7 @@
 						<form action="controllerreceita" method="post" enctype="multipart/form-data">
 
 							<% session=request.getSession(); Integer iduser=(Integer) session.getAttribute("id"); %>
-
+                            <% CategoriaReceita[] categorias = CategoriaReceita.values(); %>
 								<div class="col">
 									<label>Nome da Receita</label>
 									<input type="text" name="titulo" class="form-control" />
@@ -73,8 +73,8 @@
 									<div class="col-6">
 										<h4
 											style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-											PORï¿½ï¿½O</h4>
-										<label>Coloque a quantidade de porï¿½ï¿½es da receita</label>
+											PORÇÃO</h4>
+										<label>Coloque a quantidade de porções da receita</label>
 										<input type="text" name="porcao" class="form-control" />
 									</div>
 

@@ -24,14 +24,16 @@
 					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 						integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 						crossorigin="anonymous"></script>
+						
+					<style>
+                        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+                        
+                    </style>
+                    
 				</head>
 
 				<body>
 
-					<style>
-						@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-						}
-					</style>
 					<div>
 						<nav style="background:white !important" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -42,9 +44,8 @@
 										class="navbar-brand" href="Home.jsp">
 										<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30"
 											height="24" class="d-inline-block align-text-top">
-										<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;
-			    	 ">RECEITAS DE CASA</h2>
 									</a>
+									<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
 								</div>
 
 								<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -87,7 +88,7 @@
 											</li>
 
 											<li>
-												<a href="#">
+												<a href="receitasadd.jsp">
 													<img style="width: 20px;height: 20px;" src="./images/receita.png"
 														alt="">
 													<h6>Envie sua receita</h6>
