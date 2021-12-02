@@ -40,8 +40,8 @@
 								<div>
 									<a style="display: flex;flex-direction: row;align-items: center;"
 										class="navbar-brand" href="Home.jsp">
-										<img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30"
-											height="24" class="d-inline-block align-text-top">
+										<img src="./images/logo.png" alt="" width="30"
+											height="30" class="d-inline-block align-text-top">
 										<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;
 			    	 ">RECEITAS DE CASA</h2>
 									</a>

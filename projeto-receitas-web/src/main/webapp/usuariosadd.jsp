@@ -16,7 +16,7 @@
 </style>
 		<c:import url="utils/header.jsp"/>
 		
-		<div class="container">
+		<div class="container" style="padding-left: 200px; padding-right: 200px">
 			<h1 style="text-align: center; font-family:'Poppins';font-size: 32px;padding-top: 40px;">Bem-Vindo!</h1>
 			<h3 style="text-align: center; font-family: 'Poppins';
     font-size: 22px;">Cadastre-se em nosso site</h3>

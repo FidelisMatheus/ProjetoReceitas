@@ -6,10 +6,10 @@
 
 				<!DOCTYPE html>
 				<html>
-				<link href="css/geral.css" rel="stylesheet">
+				<link href="css/forms.css" rel="stylesheet">
 
 				<head>
-					<meta charset="ISO-8859-1">
+					<meta charset="UTF-8">
 
 					<title>Adicionar Receita</title>
 					<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -45,24 +45,27 @@
 
 					<div class="container" style="padding-left: 200px; padding-right: 200px">
 						<div style="margin: 5% auto"></div>
-						<h3 style="text-align: center;">ENVIAR RECEITA</h3>
+						<h3 style="text-align: center; font-family:'Poppins';font-size: 26px;padding-top: 30px;padding-bottom:15px;">ENVIAR RECEITA</h3>
 						<form action="controllerreceita" method="post" enctype="multipart/form-data">
+						<% CategoriaReceita[] categorias = CategoriaReceita.values(); %>
+
+						
 
 							<% session=request.getSession(); Integer iduser=(Integer) session.getAttribute("id"); %>
 
-								<div class="col">
-									<label>Nome da Receita</label>
-									<input type="text" name="titulo" class="form-control" />
+								<div style="margin-top:10px" class="col">
+									<label style="margin-right:7px;text-align:center">Nome da Receita:</label>
+									<input style="margin-top:0 !important;" type="text" name="titulo" class="form-style" />
 								</div>
 								<div style="margin: 2% auto"></div>
-								<div class="row">
+								<div style="margin-top: 30px" class="row">
 									<div class="col-6">
-										<label>Envie Fotos</label>
-										<input type="file" name="dataFile" class="form-control" />
+										<label >Envie Fotos:</label>
+										<input style="border-radius: 15px;" type="file" name="dataFile" class="form-control" />
 									</div>
 									<div class="col-6">
-										<label>Categoria</label>
-										<select name="categoria" class="form-control">
+										<label>Categoria:</label>
+										<select name="categoria" class="form-style">
 											<c:forEach items="<%=categorias%>" var="item">
 												<option>${item}</option>
 											</c:forEach>
@@ -70,39 +73,41 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-6">
+									<div style="display: flex;flex-direction: column;align-items: center;" class="col-6">
 										<h4
-											style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-											PORï¿½ï¿½O</h4>
-										<label>Coloque a quantidade de porï¿½ï¿½es da receita</label>
-										<input type="text" name="porcao" class="form-control" />
+											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
+											Porções</h4>
+										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porções da receita</label>
+										<input type="text" name="porcao" class="form-style" />
 									</div>
 
-									<div class="col-6">
+									<div style="display: flex;flex-direction: column;align-items: center;" class="col-6">
 										<h4
-											style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-											TEMPO DE PREPARO</h4>
-										<label>Coloque aqui o tempo de preparo da receita</label>
-										<input type="text" name="tempopreparo" class="form-control" />
+											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
+											Tempo de Preparo</h4>
+										<label style="text-align:center;color: #868e96;font-size:15px" >Coloque aqui o tempo de preparo da receita</label>
+										<input type="text" name="tempopreparo" class="form-style" />
 									</div>
 								</div>
 
 
-								<div class="col">
+								<div style="display: flex;flex-direction: column;align-items: center;" class="col">
 									<h4
-										style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-										INGREDIENTES</h4>
-									<label>Liste os ingredientes e suas quantidades aqui</label>
-									<textarea class="form-control" id="ingredientes" rows="5" name="ingredientes"
+										style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
+										Ingredientes</h4>
+									<label style="text-align:center;color: #868e96;font-size:15px">Liste os ingredientes e suas quantidades aqui:</label>
+									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
+									 id="ingredientes" rows="5" name="ingredientes"
 										placeholder="Exemplo: &#10;1 xï¿½cara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
 								</div>
 
-								<div class="col">
+								<div style="display: flex;flex-direction: column;align-items: center;" class="col">
 									<h4
-										style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-										MODO DE PREPARO</h4>
-									<label>Descreva o passo a passo do preparo sendo um passo por linha</label>
-									<textarea class="form-control" id="modopreparo" rows="5" name="modopreparo"
+										style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
+										Modo de preparo</h4>
+									<label style="text-align:center;color: #868e96;font-size:15px">Descreva o passo a passo do preparo sendo um passo por linha:</label>
+									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
+									class=form-textarea id="modopreparo" rows="5" name="modopreparo"
 										placeholder="Exemplo: &#10;Coloque a farinha na forma;&#10;Adicione leite."></textarea>
 								</div>
 
@@ -111,31 +116,32 @@
 
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<h3>ATENï¿½ï¿½O ANTES DE ENVIAR</h3>
+									<h3 style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">Atenção antes de enviar</h3>
 									<br />
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<label>
-										Revise toda sua receita para que tenha certeza que nï¿½o esta faltando nada.<br />
+									<label style="text-align:center;color: #868e96;font-size:15px">
+										Revise toda sua receita para que tenha certeza que não esta faltando nada.<br />
 
 									</label>
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<label>
+									<label style="text-align:center;color: #868e96;font-size:15px">
 										Nï¿½o envie fotos de terceiros, apenas foto de sua autoria.<br />
 									</label>
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<label>
-										As informaï¿½ï¿½es poderï¿½o ser alteradas caso haja erros.<br />
+									<label style="text-align:center;color: #868e96;font-size:15px">
+										As informações poderão ser alteradas caso haja erros.<br />
 									</label>
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<input type="submit" value="Enviar Receita" class="btn btn-primary" />
+									<input style="background: linear-gradient(54deg, #EF7D00, #FFD922); width: 150px;height: 45px;border-radius: 200px;color: #FFFFFF;border: none; font-size: 16px;
+    margin-top: 2px;" type="submit" value="Enviar Receita" />
 								</div>
 
 						</form>
