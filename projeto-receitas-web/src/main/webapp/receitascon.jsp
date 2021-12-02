@@ -58,7 +58,7 @@
 
                                             <c:forEach var="receita" items="${listadereceitas}">
                                                 <tr style="background-color: #e5e4e2;">
-                                                    <td scope="row">${receita.titulo}</td>
+                                                    <td scope="row"><a href="${pageContext.request.contextPath}/exibicaoreceita?action=exibir&id=${receita.id}">${receita.titulo}</a></td>
                                                     <td scope="row">${receita.categoria}</td>
                                                     <td scope="row">${receita.modoPreparo}</td>
                                                     <td scope="row">${receita.porcao}</td>

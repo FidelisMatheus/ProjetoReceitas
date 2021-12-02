@@ -9,12 +9,13 @@ import com.google.gson.Gson;
 
 public class WebService {
 
-	static String webService = "";
+	static String webService = "https://auth.mercadolivre.com.br/";
 	static int codigoSucesso = 200;
 	
 	public static Produto buscaProduto(String produto) throws Exception{
 		//aqui vou colocar a url para chamada de buscar um produto no mercado livre
-		String urlParaChamada = webService + produto + "/json";
+		String urlParaChamada = webService +""+ produto;
+		Produto produto1;
 		
 		try {
 			URL url = new URL(urlParaChamada);
@@ -27,23 +28,44 @@ public class WebService {
 			String jsonEmString = converteJsonEmString(resposta);
 			
 			Gson gson = new Gson();
-			Produto produto1 = gson.fromJson(jsonEmString, Produto.class);
+			produto1 = gson.fromJson(jsonEmString, Produto.class);
 			
 			return produto1;
 			
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			throw new Exception("ERRO: " + e);
 		}
-		return null;
 		
 	}
 	
 	
 	//metodo que vai fazer a autorizacao no mercado livre e pegar o token
-	public static void getAuth() {
+	public String getAuth() throws Exception {
 		
+		String urlParaChamada = webService + "authorization?response_type=code&client_id=7601532609534134&redirect_uri=http://localhost:8080/ProjetoReceitasWeb/Home.jsp";
+		String jsonEmString;
 		
+		try {
+			
+			URL url = new URL(urlParaChamada);
+			HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
+			conexao.setRequestMethod("GET");			
+			conexao.setRequestProperty("accept", "application/json");
+			
+			if (conexao.getResponseCode() != codigoSucesso) {
+				throw new RuntimeException("HTTP error code : " + conexao.getResponseCode());
+			}
+			
+			BufferedReader resposta = new BufferedReader(new InputStreamReader((conexao.getInputStream())));
+			jsonEmString = converteJsonEmString(resposta);
+						
+			
+		} catch (Exception e) {
+			throw new Exception("ERRO: " + e);
+		}
+		
+		return jsonEmString;
 		
 	}
 	

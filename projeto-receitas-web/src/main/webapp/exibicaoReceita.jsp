@@ -63,7 +63,9 @@
 		            <label>${receita.tempoPreparo}</label>
 	           </div>  
            </div> 
-			
+			<div class="btn-acao">
+                <a href="${pageContext.request.contextPath}/ingredientes?action=list&id=${receita.id}">Lista Ingredientes para Compra</a>
+            </div>
 		</div>
 	
 	<c:import url="utils/footer.html"/>
