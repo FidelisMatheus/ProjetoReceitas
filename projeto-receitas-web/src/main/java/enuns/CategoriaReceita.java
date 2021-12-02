@@ -1,9 +1,15 @@
 package enuns;
 
 public enum CategoriaReceita {
-	bolos,
-	carne,
-	peixe,
-	salada,
-	molho
+	Bolos,
+	Carne,
+	Peixe,
+	Salada,
+	Molho,
+	Sopas,
+	Bebidas,
+	Lanches,
+	Saudavel,
+	Natal,
+	
 }

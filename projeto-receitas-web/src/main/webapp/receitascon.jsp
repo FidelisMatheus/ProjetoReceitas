@@ -12,7 +12,7 @@
 
                         <head>
 
-                            <meta charset="ISO-8859-1">
+                            <meta charset="UTF-8">
                             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
                                 rel="stylesheet"
                                 integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -40,30 +40,29 @@
                                         <thead>
                                             <tr
                                                 style="background: linear-gradient(320deg, #EF7D00, #FFD922); border-bottom: 2px solid transparent;">
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
-                                                    scope="col">Tï¿½tulo</th>
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
-                                                    scope="col">Descriï¿½ï¿½o</th>
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
+                                                    scope="col">Título</th>
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
+                                                    scope="col">Ingredientes</th>
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Modo de Preparo</th>
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
-                                                    scope="col">Porï¿½ï¿½o</th>
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
+                                                    scope="col">Porções</th>
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Tempo de Preparo</th>
-                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins'"
-                                                    scope="col">Aï¿½ï¿½es</th>
+                                                <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
+                                                    scope="col">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
 
                                             <c:forEach var="receita" items="${listadereceitas}">
                                                 <tr style="background-color: #e5e4e2;">
-                                                    <td scope="row"><a href="${pageContext.request.contextPath}/exibicaoreceita?action=exibir&id=${receita.id}">${receita.titulo}</a></td>
-                                                    <td scope="row">${receita.categoria}</td>
-                                                    <td scope="row">${receita.modoPreparo}</td>
-                                                    <td scope="row">${receita.porcao}</td>
-                                                    <td scope="row">${receita.tempoPreparo}</td>
-                                                    <td scope="row">${receita.descricao}</td>
+                                                    <td style="text-align: center;" scope="row">${receita.titulo}</a></td>
+                                                    <td style="text-align: center;" scope="row">${receita.descricao}</td>
+                                                    <td style="text-align: center;" scope="row">${receita.modoPreparo}</td>
+                                                    <td style="text-align: center;" scope="row">${receita.porcao}</td>
+                                                    <td style="text-align: center;" scope="row">${receita.tempoPreparo}</td>
 
                                                     <td scope="row">
 
@@ -77,6 +76,11 @@
                                                             <div class="btn-acao">
                                                                 <a
                                                                     href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
+                                                            </div>
+                                                            
+                                                            <div class="btn-acao">
+                                                                <a
+                                                                    href="${pageContext.request.contextPath}/exibicaoreceita?action=exibir&id=${receita.id}">Ver</a>
                                                             </div>
                                                         </div>
                                                     </td>

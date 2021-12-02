@@ -76,8 +76,8 @@
 									<div style="display: flex;flex-direction: column;align-items: center;" class="col-6">
 										<h4
 											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
-											Porï¿½ï¿½es</h4>
-										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porï¿½ï¿½es da receita</label>
+											Porções</h4>
+										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porções da receita</label>
 										<input type="text" name="porcao" class="form-style" />
 									</div>
 
@@ -98,7 +98,7 @@
 									<label style="text-align:center;color: #868e96;font-size:15px">Liste os ingredientes e suas quantidades aqui:</label>
 									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
 									 id="ingredientes" rows="5" name="ingredientes"
-										placeholder="Exemplo: &#10;1 xï¿½cara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
+										placeholder="Exemplo: &#10;1 xícara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
 								</div>
 
 								<div style="display: flex;flex-direction: column;align-items: center;" class="col">
@@ -116,26 +116,26 @@
 
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<h3 style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">Atenï¿½ï¿½o antes de enviar</h3>
+									<h3 style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">Atenção antes de enviar</h3>
 									<br />
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 									<label style="text-align:center;color: #868e96;font-size:15px">
-										Revise toda sua receita para que tenha certeza que nï¿½o esta faltando nada.<br />
+										Revise toda sua receita para que tenha certeza que não esta faltando nada.<br />
 
 									</label>
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 									<label style="text-align:center;color: #868e96;font-size:15px">
-										Nï¿½o envie fotos de terceiros, apenas foto de sua autoria.<br />
+										Não envie fotos de terceiros, apenas foto de sua autoria.<br />
 									</label>
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 									<label style="text-align:center;color: #868e96;font-size:15px">
-										As informaï¿½ï¿½es poderï¿½o ser alteradas caso haja erros.<br />
+										As informações poderão ser alteradas caso haja erros.<br />
 									</label>
 								</div>
 								<div

@@ -44,11 +44,10 @@
 										class="navbar-brand" href="Home.jsp">
 										<img src="./images/logo.png" alt="" width="30"
 											height="30" class="d-inline-block align-text-top">
-										<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;
-			    	 ">RECEITAS DE CASA</h2>
+											<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
 									</a>
-									<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
-								</div>
+									</div>
+									
 
 								<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 									data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -139,16 +138,16 @@
 
 							<div class="container-fluid">
 
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
-								<button type="button" class="btn-nav">Categoria</button>
+								<button type="button" class="btn-nav">Bolos</button>
+								<button type="button" class="btn-nav">Carne</button>
+								<button type="button" class="btn-nav">Peixe</button>
+								<button type="button" class="btn-nav">Salada</button>
+								<button type="button" class="btn-nav">Molho</button>
+								<button type="button" class="btn-nav">Sopas</button>
+								<button type="button" class="btn-nav">Bebidas</button>
+								<button type="button" class="btn-nav">Lanches</button>
+								<button type="button" class="btn-nav">Saudavel</button>
+								<button type="button" class="btn-nav">Natal</button>
 
 							</div>
 
