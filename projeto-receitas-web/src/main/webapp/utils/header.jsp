@@ -24,12 +24,11 @@
 					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 						integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 						crossorigin="anonymous"></script>
-						
+
 					<style>
-                        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-                        
-                    </style>
-                    
+						@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+					</style>
+
 				</head>
 
 				<body>
@@ -42,12 +41,14 @@
 								<div>
 									<a style="display: flex;flex-direction: row;align-items: center;"
 										class="navbar-brand" href="Home.jsp">
-										<img src="./images/logo.png" alt="" width="30"
-											height="30" class="d-inline-block align-text-top">
-											<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
+										<img src="./images/logo.png" alt="" width="30" height="30"
+											class="d-inline-block align-text-top">
+										<h2
+											style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">
+											RECEITAS DE CASA</h2>
 									</a>
-									</div>
-									
+								</div>
+
 
 								<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 									data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -63,12 +64,9 @@
 			     -->
 
 								<div class="nav justify-contente-center">
-									<form class="d-flex">
-										<input
-											style="border-radius:15px;border-color: #DBDBDB;font-size: 12px;width: 235px;height: 35px;"
-											class="form-control me-3" type="search" placeholder="Pesquise aqui"
-											aria-label="Search">
-										<button class="btn-pesq" type="submit">Pesquisar</button>
+									<form action="Search" method="post" class="d-flex">
+										<input type="text" name="pesquisa" id="pesquisa">
+										<input class="btn-pesq" type="submit" value="Pesquisar" />
 									</form>
 								</div>
 
@@ -88,42 +86,53 @@
 												</a>
 											</li>
 
-											<li>
-												<a href="receitasadd.jsp">
-													<img style="width: 20px;height: 20px;" src="./images/receita.png"
-														alt="">
-													<h6>Envie sua receita</h6>
-												</a>
-											</li>
+											<% String user=(String) session.getAttribute("user"); if (user !=null) {
+												session=request.getSession(); %>
+												<li>
+													<a href="receitasadd.jsp">
+														<img style="width: 20px;height: 20px;"
+															src="./images/receita.png" alt="">
+														<h6>Envie sua receita</h6>
+													</a>
 
-											<li>
-												<% String user=(String) session.getAttribute("user"); if (user !=null) {
-													session=request.getSession(); %>
-													<div class="dropdown">
-														<button style="background-color:#EF7D00;border:none;" class="btn btn-secondary dropdown-toggle" type="button"
-															id="dropdownMenuButton" data-toggle="dropdown"
-															aria-haspopup="true" aria-expanded="false">
-															${ user }
-														</button>
-														<div style="width:100%" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-															<a class="dropdown-item"
-																href="usuariosadd.jsp">Adicionar</a>
-															<a class="dropdown-item" href="usuarioscon.jsp">Ver
-																todos</a>
-															<a class="dropdown-item" href="usuariosedit.jsp">Editar
-																Cadastro</a>
-															<a class="dropdown-item"
-																href="LoginJSP/Deslogar.jsp">Sair</a>
-														</div>
-													</div>
 													<% } else { %>
-														<a href="Login.jsp">
-															<img style="width: 20px;height: 20px;"
-																src="./images/entrar.png" alt="">
-															<h6>Entrar</h6>
+														<a
+															style="background: transparent; border: none !important;font-size:0;">
+
 														</a>
 														<% } %>
-											</li>
+												</li>
+
+												<li>
+													<% user=(String) session.getAttribute("user"); if (user !=null) {
+														session=request.getSession(); %>
+														<div class="dropdown">
+															<button style="background-color:#EF7D00;border:none;"
+																class="btn btn-secondary dropdown-toggle" type="button"
+																id="dropdownMenuButton" data-toggle="dropdown"
+																aria-haspopup="true" aria-expanded="false">
+																${ user }
+															</button>
+															<div style="width:100%" class="dropdown-menu"
+																aria-labelledby="dropdownMenuButton">
+																<a class="dropdown-item"
+																	href="usuariosadd.jsp">Adicionar</a>
+																<a class="dropdown-item" href="usuarioscon.jsp">Ver
+																	todos</a>
+																<a class="dropdown-item" href="usuariosedit.jsp">Editar
+																	Cadastro</a>
+																<a class="dropdown-item"
+																	href="LoginJSP/Deslogar.jsp">Sair</a>
+															</div>
+														</div>
+														<% } else { %>
+															<a href="Login.jsp">
+																<img style="width: 20px;height: 20px;"
+																	src="./images/entrar.png" alt="">
+																<h6>Entrar</h6>
+															</a>
+															<% } %>
+												</li>
 										</ul>
 									</div>
 								</div>
