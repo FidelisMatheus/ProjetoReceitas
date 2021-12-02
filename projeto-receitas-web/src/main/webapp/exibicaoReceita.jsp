@@ -64,7 +64,7 @@
 	           </div>  
            </div> 
 			<div class="btn-acao">
-                <a href="${pageContext.request.contextPath}/ingredientes?action=list&id=${receita.id}">Lista Ingredientes para Compra</a>
+                <a href="${pageContext.request.contextPath}/ListaIngrediente?action=list&id=${receita.id}">Lista Ingredientes para Compra</a>
             </div>
 		</div>
 	

@@ -44,8 +44,7 @@
 										class="navbar-brand" href="Home.jsp">
 										<img src="./images/logo.png" alt="" width="30"
 											height="30" class="d-inline-block align-text-top">
-										<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;
-			    	 ">RECEITAS DE CASA</h2>
+										<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
 									</a>
 									<h2 style="font-family:'Poppins';font-weight:400 !important;font-size:16px; padding-left:8px; color: #EF7D00;margin-bottom: 0;">RECEITAS DE CASA</h2>
 								</div>
@@ -64,12 +63,9 @@
 			     -->
 
 								<div class="nav justify-contente-center">
-									<form class="d-flex">
-										<input
-											style="border-radius:15px;border-color: #DBDBDB;font-size: 12px;width: 235px;height: 35px;"
-											class="form-control me-3" type="search" placeholder="Pesquise aqui"
-											aria-label="Search">
-										<button class="btn-pesq" type="submit">Pesquisar</button>
+									<form action="Search" method="post" class="d-flex">
+										<input  type="text" name="pesquisa" id="pesquisa">
+										<input class="btn-pesq" type="submit" value="Pesquisar"/>
 									</form>
 								</div>
 
@@ -88,17 +84,25 @@
 													<h6>Cadastrar-se</h6>
 												</a>
 											</li>
-
+											
+											<% String user=(String) session.getAttribute("user"); if (user !=null) {
+													session=request.getSession(); %>
 											<li>
-												<a href="receitasadd.jsp">
-													<img style="width: 20px;height: 20px;" src="./images/receita.png"
-														alt="">
-													<h6>Envie sua receita</h6>
-												</a>
+													<a href="receitasadd.jsp">
+														<img style="width: 20px;height: 20px;" src="./images/receita.png"
+															alt="">
+														<h6>Envie sua receita</h6>
+													</a>
+												
+												<% } else { %>
+													<a style="background: transparent; border: none !important;font-size:0;">
+														
+													</a>
+												<% } %>
 											</li>
 
 											<li>
-												<% String user=(String) session.getAttribute("user"); if (user !=null) {
+												<% user=(String) session.getAttribute("user"); if (user !=null) {
 													session=request.getSession(); %>
 													<div class="dropdown">
 														<button style="background-color:#EF7D00;border:none;" class="btn btn-secondary dropdown-toggle" type="button"

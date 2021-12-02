@@ -81,7 +81,8 @@
 				
 				</div>
 				<div style="text-align:center; margin-top: 10px">
-				<input style="margin: 0 auto" type="submit" value="Salvar" class="btn-confirmar"/></div>
+					<input style="margin: 0 auto" type="submit" value="Salvar" class="btn-confirmar"/>
+				</div>
 			</form>
 		</div>
 		

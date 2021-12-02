@@ -54,21 +54,22 @@ public class LoginServlet extends HttpServlet {
 		if(user != null && pwd != null && !user.isEmpty() && !pwd.isEmpty())
 			usuario = daouser.getEmailSenha(user, pwd);
 		
-		if(usuario != null){
-			HttpSession session = request.getSession();
-			session.setAttribute("usuario", usuario);
-			session.setAttribute("user", usuario.getNome());
-			session.setAttribute("id", usuario.getId());
-			
-			//setting session to expiry in 30 mins
-			session.setMaxInactiveInterval(30*60);
-			
-			response.sendRedirect("Home.jsp");
-		} else {
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/Login.jsp");
-			PrintWriter out= response.getWriter();
-			out.println("<font color=red>Either user name or password is wrong.</font>");
-			rd.include(request, response);
+		try { 
+			if(usuario != null){
+				HttpSession session = request.getSession();
+				session.setAttribute("usuario", usuario);
+				session.setAttribute("user", usuario.getNome());
+				session.setAttribute("id", usuario.getId());
+				session.setAttribute("admin", usuario.isAdmin());
+				
+				//setting session to expiry in 30 mins
+				session.setMaxInactiveInterval(30*60);
+				
+				response.sendRedirect("Home.jsp");
+			}
+		} catch(NullPointerException e)  {
+			e.printStackTrace();
+			request.getRequestDispatcher("Login.jsp").forward(request,response);
 		}
 	}
 

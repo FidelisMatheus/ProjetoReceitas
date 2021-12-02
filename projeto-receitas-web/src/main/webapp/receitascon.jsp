@@ -9,6 +9,9 @@
                         <!DOCTYPE html>
                         <html>
                         <link href="css/consultar.css" rel="stylesheet">
+                        <script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"  crossorigin="anonymous"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"  crossorigin="anonymous"></script>
+	<script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"  crossorigin="anonymous"></script>
 
                         <head>
 
@@ -66,19 +69,29 @@
                                                     <td scope="row">${receita.descricao}</td>
 
                                                     <td scope="row">
-
-                                                        <div
-                                                            style="display:flex;flex-direction: row;justify-content: space-around;">
-                                                            <div class="btn-acao">
-                                                                <a
-                                                                    href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>
-                                                            </div>
-
-                                                            <div class="btn-acao">
-                                                                <a
-                                                                    href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
-                                                            </div>
-                                                        </div>
+														
+														<% String user=(String) session.getAttribute("user");
+														   Boolean admin = (Boolean) session.getAttribute("admin");
+														   if ((user != null) && (admin != null)) {
+														    session=request.getSession(); %>
+																	<div
+			                                                            style="display:flex;flex-direction: row;justify-content: space-around;">
+			                                                            <div class="btn-acao">
+			                                                                <a
+			                                                                    href="${pageContext.request.contextPath}/controllerreceita?action=edit&id=${receita.id}">Editar</a>
+			                                                            </div>
+			
+			                                                            <div class="btn-acao">
+			                                                                <a
+			                                                                    href="javascript: if (confirm('Deseja Excluir o registro?')) {window.location.href='${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}'} else {void ('') };">Excluir</a>
+			                                                            </div>
+			                                                        </div>
+																
+															<% } else { %>
+																<a style="background: transparent; border: none !important;font-size:0;"></a>
+															<% } %>
+														
+                                                        
                                                     </td>
 
                                                 </tr>

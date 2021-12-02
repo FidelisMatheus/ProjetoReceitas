@@ -5,8 +5,10 @@ import java.util.function.Consumer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
 import model.Receita;
+import model.Usuario;
 
 public class ReceitaDao implements Dao<Receita> {
 	
@@ -51,5 +53,13 @@ private EntityManager em;
 	@Override
 	public void delete(Receita objeto) {
 		executeInsideTransaction(em->em.remove(objeto));
+	}
+	
+	public List<Receita> filterReceita(String name){
+		TypedQuery<Receita> query = em.createQuery("SELECT r FROM Receita r WHERE titulo like '%" + name + "%'", Receita.class);
+		if(query.getSingleResult() != null)
+			return query.getResultList();
+		else
+			return null;
 	}
 }
