@@ -50,7 +50,7 @@
                                             <tr
                                                 style="background: linear-gradient(320deg, #EF7D00, #FFD922); border-bottom: 2px solid transparent;">
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
-                                                    scope="col">Tï¿½tulo</th>
+                                                    scope="col">Título</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Ingredientes</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
@@ -60,7 +60,7 @@
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Tempo de Preparo</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
-                                                    scope="col">Aï¿½ï¿½es</th>
+                                                    scope="col">Ações</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -88,7 +88,7 @@
 
                                                             <div class="btn-acao">
                                                                 <a
-                                                                    href="${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}">Excluir</a>
+                                                                    href="javascript: if (confirm('Deseja Excluir o registro?')) {window.location.href='${pageContext.request.contextPath}/controllerreceita?action=del&id=${receita.id}'} else {void ('') };">Excluir</a>
                                                             </div>
 
                                                             <div class="btn-acao">

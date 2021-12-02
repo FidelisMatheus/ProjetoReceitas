@@ -55,7 +55,7 @@
 											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
 											Porções</h4>
 										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porções da receita</label>
-										<input type="text" name="porcao" class="form-style" />
+										<input type="text" name="porcao" class="form-style" value="${ receita.porcao }" />
 									</div>
 
 									<div style="display: flex;flex-direction: column;align-items: center;" class="col-6">
@@ -63,7 +63,7 @@
 											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
 											Tempo de Preparo</h4>
 										<label style="text-align:center;color: #868e96;font-size:15px" >Coloque aqui o tempo de preparo da receita</label>
-										<input type="text" name="tempopreparo" value="${receita.tempopreparo}" class="form-style" />
+										<input type="text" name="tempopreparo" value="${receita.tempoPreparo}" class="form-style" />
 									</div>
 								</div>
 
@@ -73,9 +73,9 @@
 										style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
 										Ingredientes</h4>
 									<label style="text-align:center;color: #868e96;font-size:15px">Liste os ingredientes e suas quantidades aqui:</label>
-									<textarea value="${receita.descricao}" style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
+									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
 									 id="ingredientes" rows="5" name="ingredientes"
-										placeholder="Exemplo: &#10;1 xícara de Farinha de Trigo;&#10;2 colheres de sopa de fermento."></textarea>
+										placeholder="Exemplo: &#10;1 xícara de Farinha de Trigo;&#10;2 colheres de sopa de fermento.">${receita.descricao}</textarea>
 								</div>
 
 								<div style="display: flex;flex-direction: column;align-items: center;" class="col">
@@ -83,9 +83,9 @@
 										style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
 										Modo de preparo</h4>
 									<label style="text-align:center;color: #868e96;font-size:15px">Descreva o passo a passo do preparo sendo um passo por linha:</label>
-									<textarea value="${receita.modoPreparo}" style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
-									class=form-textarea id="modopreparo" rows="5" name="modopreparo"
-										placeholder="Exemplo: &#10;Coloque a farinha na forma;&#10;Adicione leite."></textarea>
+									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
+										class=form-textarea id="modopreparo" rows="5" name="modopreparo"
+										placeholder="Exemplo: &#10;Coloque a farinha na forma;&#10;Adicione leite.">${receita.modoPreparo}</textarea>
 								</div>
 
 

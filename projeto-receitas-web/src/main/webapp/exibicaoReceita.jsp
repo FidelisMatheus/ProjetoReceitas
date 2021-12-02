@@ -31,65 +31,66 @@
 						<c:import url="utils/header.jsp" />
 
 						<div class="container">
-							<input type="hidden" name="receitaid" value="${receita.id}" />
-							<div class="col" style="margin: 50px 0 -80px 0;display: flex;justify-content: center;">
-								<label
-									style="font-family: 'Poppins';font-size: 25px;text-transform: uppercase;margin-bottom: 30px;">${receita.titulo}</label>
-							</div>
-
-							<div style="display:flex;justify-content: center;">
-								<div style="margin-top: 75px; width:70%" class="card mb-2">
-									<img src="<c:url value=" ./images/fundo.jpg" />" class="card-img-top" alt="...">
-									<div class="card-body">
-										<div style="display: flex;justify-content: space-evenly;align-content: center;">
-
-											<div style="">
-												<label
-													style="text-transform: uppercase;color: #EF7D00;font-size: 16px;display: flex;justify-content: center;margin-bottom: -23px;">Porções</label>
-												<br />
-												<label
-													style="display: flex;justify-content: center;color: gray;">${receita.porcao}</label>
+								<input type="hidden" name="receitaid" value="${receita.id}" />
+								<div class="col" style="margin: 50px 0 -80px 0;display: flex;justify-content: center;">
+									<label
+										style="font-family: 'Poppins';font-size: 25px;text-transform: uppercase;margin-bottom: 30px;">${receita.titulo}</label>
+								</div>
+	
+								<div style="display:flex;justify-content: center;">
+									<div style="margin-top: 75px; width:70%" class="card mb-2">
+										<img src="<c:url value=" ./images/fundo.jpg" />" class="card-img-top" alt="...">
+										<div class="card-body">
+											<div style="display: flex;justify-content: space-evenly;align-content: center;">
+	
+												<div style="">
+													<label
+														style="text-transform: uppercase;color: #EF7D00;font-size: 16px;display: flex;justify-content: center;margin-bottom: -23px;">Porções</label>
+													<br />
+													<label
+														style="display: flex;justify-content: center;color: gray;">${receita.porcao}</label>
+												</div>
+	
+												<div style="">
+													<label
+														style="text-transform: uppercase;color: #EF7D00;font-size: 15px;display: flex;justify-content: center;margin-bottom: -23px;">Tempo
+														de Preparo</label>
+													<br />
+													<label
+														style="display: flex;justify-content: center;color: gray;">${receita.tempoPreparo}</label>
+												</div>
+	
 											</div>
-
-											<div style="">
-												<label
-													style="text-transform: uppercase;color: #EF7D00;font-size: 15px;display: flex;justify-content: center;margin-bottom: -23px;">Tempo
-													de Preparo</label>
-												<br />
-												<label
-													style="display: flex;justify-content: center;color: gray;">${receita.tempoPreparo}</label>
-											</div>
-
 										</div>
 									</div>
 								</div>
-							</div>
-
-							<div style="margin-top: 40px;" class="justify-content-center">
-
-								<div class="col" style="margin: 0 auto;">
-									<label
-										style="text-transform: uppercase;color: #EF7D00;font-size: 20px;display: flex;justify-content: center;margin-bottom: -20px;">Ingredientes</label>
-									<br />
-									<label
-										style="display: flex;justify-content: center;margin-bottom: 25px;color: gray;">${receita.descricao}</label>
+	
+								<div style="margin-top: 40px;" class="justify-content-center">
+	
+									<div class="col" style="margin: 0 auto;">
+										<label
+											style="text-transform: uppercase;color: #EF7D00;font-size: 20px;display: flex;justify-content: center;margin-bottom: -20px;">Ingredientes</label>
+										<br />
+										<label
+											style="display: flex;justify-content: center;margin-bottom: 25px;color: gray;">${receita.descricao}</label>
+									</div>
+	
+									<div class="col" style="margin: 0 auto;">
+										<label
+											style="text-transform: uppercase;color: #EF7D00;font-size: 20px;display: flex;justify-content: center;margin-bottom: -20px;">Modo
+											de Preparo</label>
+										<br />
+										<label
+											style="display: flex;justify-content: center;margin-bottom: 90px;color: gray;">${receita.modoPreparo}</label>
+									</div>
+	
+									<div class="btn-acao">
+									<a style="color: black;text-decoration: none;display: flex;align-items: center;justify-content: center;margin-bottom: -60px;"
+										href="${pageContext.request.contextPath}/ListaIngrediente?action=list&id=${receita.id}">
+										<img style="width: 20px;height: 20px;margin-right:10px;"
+																src="./images/carrinho.png" alt="">
+										Buscar Ingredientes</a>
 								</div>
-
-								<div class="col" style="margin: 0 auto;">
-									<label
-										style="text-transform: uppercase;color: #EF7D00;font-size: 20px;display: flex;justify-content: center;margin-bottom: -20px;">Modo
-										de Preparo</label>
-									<br />
-									<label
-										style="display: flex;justify-content: center;margin-bottom: 90px;color: gray;">${receita.modoPreparo}</label>
-								</div>
-
-								<div class="btn-acao">
-								<a style="color: black;text-decoration: none;display: flex;align-items: center;justify-content: center;margin-bottom: -60px;"
-									href="${pageContext.request.contextPath}/ListaIngrediente?action=list&id=${receita.id}">
-									<img style="width: 20px;height: 20px;margin-right:10px;"
-															src="./images/carrinho.png" alt="">
-									Buscar Ingredientes</a>
 							</div>
 						</div>
 
