@@ -7,34 +7,35 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.ReceitaDao;
-import model.Receita;
+import api.WebService;
 
-@WebServlet({ "/ExibicaoReceita", "/exibicaoreceita" })
-public class ExibicaoReceita extends HttpServlet {
+@WebServlet("/MecadoLivre")
+public class MecadoLivre extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
-    public ExibicaoReceita() {
+    public MecadoLivre() {
         super();
     }
 
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		int receitaId = Integer.parseInt(request.getParameter("id"));
-		
-		if (request.getParameter("action").equals("exibir")) {
+		WebService service = new WebService();
+		try {
 			
-			ReceitaDao daoReceita = new ReceitaDao();
-			Receita conReceita= daoReceita.get(receitaId);
-			request.setAttribute("receita", conReceita);
-			request.getRequestDispatcher("exibicaoReceita.jsp").forward(request, response);
+			String token = service.getAuth();
+			
+			System.out.println("TOKEN:  " + token);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
+		
+		
 	}
 
 }

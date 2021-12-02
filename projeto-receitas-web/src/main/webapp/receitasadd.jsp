@@ -76,8 +76,8 @@
 									<div style="display: flex;flex-direction: column;align-items: center;" class="col-6">
 										<h4
 											style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">
-											Porções</h4>
-										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porções da receita</label>
+											Porï¿½ï¿½es</h4>
+										<label style="text-align:center;color: #868e96;font-size:15px">Coloque a quantidade de porï¿½ï¿½es da receita</label>
 										<input type="text" name="porcao" class="form-style" />
 									</div>
 
@@ -116,13 +116,13 @@
 
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
-									<h3 style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">Atenção antes de enviar</h3>
+									<h3 style="display: flex; margin-top: 30px; justify-content: center; align-items: center; font-family:'Poppins';font-size: 20px;">Atenï¿½ï¿½o antes de enviar</h3>
 									<br />
 								</div>
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 									<label style="text-align:center;color: #868e96;font-size:15px">
-										Revise toda sua receita para que tenha certeza que não esta faltando nada.<br />
+										Revise toda sua receita para que tenha certeza que nï¿½o esta faltando nada.<br />
 
 									</label>
 								</div>
@@ -135,7 +135,7 @@
 								<div
 									style="display: flex; margin-top: 20px; justify-content: center; align-items: center;">
 									<label style="text-align:center;color: #868e96;font-size:15px">
-										As informações poderão ser alteradas caso haja erros.<br />
+										As informaï¿½ï¿½es poderï¿½o ser alteradas caso haja erros.<br />
 									</label>
 								</div>
 								<div

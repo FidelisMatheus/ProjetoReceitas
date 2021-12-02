@@ -76,7 +76,7 @@ public class ControllerReceita_ extends HttpServlet {
 			
 			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
 			receita.setDescricao(request.getParameter("ingredientes"));
-			receita.setModoPreparo(request.getParameter("modopreparo"));
+			receita.setModoPreparo(request.getParameter("mododepreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));
@@ -93,7 +93,7 @@ public class ControllerReceita_ extends HttpServlet {
 			Receita receita = new Receita();
 			receita.setCategoria(CategoriaReceita.valueOf(request.getParameter("categoria")));
 			receita.setDescricao(request.getParameter("ingredientes"));
-			receita.setModoPreparo(request.getParameter("modopreparo"));
+			receita.setModoPreparo(request.getParameter("mododepreparo"));
 			receita.setPorcao(request.getParameter("porcao"));
 			receita.setTempoPreparo(request.getParameter("tempopreparo"));
 			receita.setTitulo(request.getParameter("titulo"));

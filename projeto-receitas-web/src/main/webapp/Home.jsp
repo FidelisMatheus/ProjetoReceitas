@@ -2,26 +2,31 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@taglib tagdir="/WEB-INF/tags" prefix="tag"%>
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <link href=".css/geral.css" rel="stylesheet">
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bem-vindo!</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');}
+    </style>
 </head>
 	<body>
-	<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');}
-</style>
-
+	
 		<c:import url="utils/header.jsp"/>
 		
 		<div class="container">
-			
+		  <!--<form action="MecadoLivre" method="get">
+		       <div style="text-align: center;font-size: 18px;font-family: 'Poppins';">
+		          <input class="btn btn-primary"  value="Autorizar Mercado Livre" type="submit"/>
+		      </div> 
+			</form>-->
 			<div style="margin: 5% auto"></div>
 			
 			<h1 style="text-align: center; color:black; font-family:'Poppins';font-size: 28px;">DESTAQUES</h1>
@@ -38,7 +43,7 @@
 				</div>
 			</div>
 			
-		<!-- Divisor -->
+		    <!-- Divisor -->
 			<div style="margin: 5% auto"></div>
 			
 			<div class='row d-flex justify-content-center'>
@@ -126,7 +131,9 @@
 				
 				<div class="col-2"></div>
 			</div>
-			
+			<div class="btn-pesq">
+                <a href="receitascon.jsp" >Todas Receitas</a>
+            </div>  
 		</div>
 		
 		
