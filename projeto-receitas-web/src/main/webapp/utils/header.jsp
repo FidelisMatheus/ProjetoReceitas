@@ -6,6 +6,7 @@
 				<!DOCTYPE html>
 				<html>
 				<link href="css/geral.css" rel="stylesheet">
+				
 
 				<head>
 					<meta charset="ISO-8859-1">
@@ -65,7 +66,7 @@
 
 								<div class="nav justify-contente-center">
 									<form action="Search" method="post" class="d-flex">
-										<input type="text" name="pesquisa" id="pesquisa">
+										<input style="border-radius: 200px;margin-right: 10px;border: 1px solid #DBDBDB;outline: none;font-size: 16px;" type="text" name="pesquisa" id="pesquisa">
 										<input class="btn-pesq" type="submit" value="Pesquisar" />
 									</form>
 								</div>

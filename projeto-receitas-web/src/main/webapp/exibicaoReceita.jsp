@@ -45,7 +45,7 @@
 
 											<div style="">
 												<label
-													style="text-transform: uppercase;color: #EF7D00;font-size: 16px;display: flex;justify-content: center;margin-bottom: -23px;">Porï¿½ï¿½o</label>
+													style="text-transform: uppercase;color: #EF7D00;font-size: 16px;display: flex;justify-content: center;margin-bottom: -23px;">Porções</label>
 												<br />
 												<label
 													style="display: flex;justify-content: center;color: gray;">${receita.porcao}</label>
@@ -84,22 +84,12 @@
 										style="display: flex;justify-content: center;margin-bottom: 90px;color: gray;">${receita.modoPreparo}</label>
 								</div>
 
-								<div class="col" style="margin: 0 auto;">
-									<label>Porï¿½ï¿½o:</label>
-									<br />
-									<label>${receita.porcao}</label>
-								</div>
-
-								<div class="col" style="margin: 0 auto;">
-									<label>Tempo de Preparo:</label>
-									<br />
-									<label>${receita.tempoPreparo}</label>
-								</div>
-							</div>
-							<div class="btn-acao">
-								<a
-									href="${pageContext.request.contextPath}/ListaIngrediente?action=list&id=${receita.id}">Lista
-									Ingredientes para Compra</a>
+								<div class="btn-acao">
+								<a style="color: black;text-decoration: none;display: flex;align-items: center;justify-content: center;margin-bottom: -60px;"
+									href="${pageContext.request.contextPath}/ListaIngrediente?action=list&id=${receita.id}">
+									<img style="width: 20px;height: 20px;margin-right:10px;"
+															src="./images/carrinho.png" alt="">
+									Buscar Ingredientes</a>
 							</div>
 						</div>
 

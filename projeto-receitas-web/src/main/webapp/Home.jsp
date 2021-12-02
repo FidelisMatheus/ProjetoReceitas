@@ -6,7 +6,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<link href=".css/geral.css" rel="stylesheet">
+<link href="css/geral.css" rel="stylesheet">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
