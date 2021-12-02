@@ -56,7 +56,7 @@
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Modo de Preparo</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
-                                                    scope="col">Porï¿½ï¿½es</th>
+                                                    scope="col">Porções</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
                                                     scope="col">Tempo de Preparo</th>
                                                 <th style="color:white;font-weight:500;font-size:15px;font-family:'Poppins';text-align:center;"
@@ -67,7 +67,7 @@
 
                                             <c:forEach var="receita" items="${listadereceitas}">
                                                 <tr style="background-color: #e5e4e2;">
-                                                    <td style="text-align: center;" scope="row">${receita.titulo}</a>
+                                                    <td style="text-align: center;" scope="row">${receita.titulo}
                                                     </td>
                                                     <td style="text-align: center;" scope="row">${receita.descricao}
                                                     </td>

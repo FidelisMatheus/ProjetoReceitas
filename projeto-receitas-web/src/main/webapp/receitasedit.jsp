@@ -84,7 +84,7 @@
 										Modo de preparo</h4>
 									<label style="text-align:center;color: #868e96;font-size:15px">Descreva o passo a passo do preparo sendo um passo por linha:</label>
 									<textarea style="border-radius: 10px;border: 1px solid #DBDBDB;margin-top: 15px; width: 100%; padding: 0.375rem 0.75rem;  font-size: 1rem;"
-										class=form-textarea id="modopreparo" rows="5" name="modopreparo"
+										class=form-textarea id="mododepreparo" rows="5" name="mododepreparo"
 										placeholder="Exemplo: &#10;Coloque a farinha na forma;&#10;Adicione leite.">${receita.modoPreparo}</textarea>
 								</div>
 
